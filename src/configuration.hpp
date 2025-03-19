@@ -14,7 +14,7 @@ namespace conf
 
     // star configuration
 
-    uint32_t const count = 9000;
+    uint32_t const count = 100000;
 
     float const radius = 8.0f;
     float const far = 7.0f;

@@ -32,11 +32,11 @@ std::vector<Star> createStars(uint32_t count, float scale) {
         float const z = dis(gen) * (conf::far - conf::near)+conf::near;
 
         // discard stars in the zone
-        if (star_free_zone.contains(x,y))
-        {
-            ++i;
-            continue;
-        } // else add itin vector
+        //if (star_free_zone.contains(x,y))
+        //{
+        //    ++i;
+        //    continue;
+        //} // else add itin vector
         stars.push_back({{x,y},z});
     }
 
@@ -49,6 +49,32 @@ std::vector<Star> createStars(uint32_t count, float scale) {
     return stars;
 }
 
+void updateGeometry(uint32_t idx, Star const& s, sf::VertexArray& va) {
+    // inverse because more depth, lesser the scale
+    float const scale = 1.0 / s.z;
+
+    float const depth_ratio = (s.z - conf::near) / (conf::far - conf::near);
+    float const color_ratio = 1.0f -depth_ratio;
+    auto const c = static_cast<uint8_t>(color_ratio * 255.0f);
+
+    sf::Vector2f const p = s.position * scale;
+    float const r = conf::radius * scale;
+
+    uint32_t const i = 4 * idx;
+
+    va[i + 0].position = { p.x - r,p.y - r };
+    va[i + 1].position = { p.x + r,p.y - r };
+    va[i + 2].position = { p.x + r,p.y + r };
+    va[i + 3].position = { p.x - r,p.y + r };
+
+    sf::Color const color{ c,c,c };
+
+    va[i + 0].color = color;
+    va[i + 1].color = color;
+    va[i + 2].color = color;
+    va[i + 3].color = color;
+}
+
 
 int main() {
 
@@ -58,6 +84,8 @@ int main() {
     // sf::RenderWindow window(sf::VideoMode(800, 600), "SFML Window");
 
     std::vector<Star> stars = createStars(conf::count,conf::far);
+
+    sf::VertexArray va{ sf::PrimitiveType::Quads, 4 * conf::count };
 
     uint32_t first = 0;
 
@@ -97,22 +125,14 @@ int main() {
             
             uint32_t const idx = (i + first) % conf::count;
             Star const& s = stars[idx];
-
-            // inverse because more depth, lesser the scale
-            float const scale = 1.0 / s.z;
-            shape.setPosition(s.position*scale+conf::window_size_f*0.5f);
-            shape.setScale(scale, scale);
-
-
-            float const depth_ratio = (s.z - conf::near) / (conf::far - conf::near);
-            float const color_ratio = 1-depth_ratio;
-            auto const c = static_cast<uint8_t>(color_ratio * 255.0f);
-            shape.setFillColor({ c,c,c });
-
-
-            window.draw(shape);
+        
+            updateGeometry(i,s,va);
             
         }
+
+        sf::Transform tf;
+        tf.translate(conf::window_size_f * 0.5f);
+        window.draw(va, tf);
 
         window.display();
 
