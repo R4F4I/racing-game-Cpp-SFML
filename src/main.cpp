@@ -30,7 +30,7 @@ std::vector<Star> createStars(uint32_t count) {
 
 int main() {
 
-    auto window = sf::RenderWindow({conf::window_size.x,conf::window_size.y}, "SFML works!");
+    auto window = sf::RenderWindow({conf::window_size.x,conf::window_size.y}, "SFML works!",sf::Style::Fullscreen);
     window.setFramerateLimit(conf::max_framerate);
 
     // sf::RenderWindow window(sf::VideoMode(800, 600), "SFML Window");
@@ -44,6 +44,16 @@ int main() {
 
         // renderering occurs here 
         window.clear();
+
+        sf::CircleShape shape{ conf::radius };
+        shape.setOrigin(conf::radius, conf::radius);
+
+        for (auto const & s: stars)
+        {
+            shape.setPosition(s.position);
+            window.draw(shape);
+        }
+
         window.display();
 
     }
