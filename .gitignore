@@ -1,8 +1,7 @@
-build
-out
-.cache
-.idea
-.vs
-.vscode
-./
-.github
+/out
+bin/
+build/
+/.vs
+.idea/
+CMakeSettings.json
+Makefile
