@@ -17,11 +17,15 @@ std::vector<Star> createStars(uint32_t count) {
 
     // create randomly distributed stars on screen
     for (uint32_t i{ count };i--;) {
-        float const x = dis(gen) * conf::window_size_f.x;
-        float const y = dis(gen) * conf::window_size_f.y;
+        // added 0.5 center all the values, because the starting values in the window start from top right
+        float const x = (dis(gen) - 0.5f) * conf::window_size_f.x;
+        float const y = (dis(gen) - 0.5f) * conf::window_size_f.y;
+
+        // random depth z for each star
+        float const z = dis(gen) * (conf::far - conf::near)+conf::near;
 
 
-        stars.push_back({{x,y}});
+        stars.push_back({{x,y},z});
     }
 
     return stars;
@@ -30,7 +34,7 @@ std::vector<Star> createStars(uint32_t count) {
 
 int main() {
 
-    auto window = sf::RenderWindow({conf::window_size.x,conf::window_size.y}, "SFML works!",sf::Style::Fullscreen);
+    auto window = sf::RenderWindow({conf::window_size.x,conf::window_size.y}, "SFML works!");
     window.setFramerateLimit(conf::max_framerate);
 
     // sf::RenderWindow window(sf::VideoMode(800, 600), "SFML Window");
@@ -50,7 +54,10 @@ int main() {
 
         for (auto const & s: stars)
         {
-            shape.setPosition(s.position);
+            // inverse because more depth, lesser the scale
+            float const scale = 1.0 / s.z;
+            shape.setPosition(s.position*scale+conf::window_size_f*0.5f);
+            shape.setScale(scale, scale);
             window.draw(shape);
         }
 
