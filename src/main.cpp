@@ -15,6 +15,13 @@ std::vector<Star> createStars(uint32_t count, float scale) {
     std::mt19937 gen(rd());
     std::uniform_real_distribution<float> dis(0.0f, 1.0f);
 
+    // "star free" zone
+    // region in front of screen where there will be no stars
+
+    sf::Vector2f const  window_world_size = conf::window_size_f * conf::near;
+    sf::FloatRect const star_free_zone = { -window_world_size * 0.5f, window_world_size };
+
+
     // create randomly distributed stars on screen
     for (uint32_t i{ count };i--;) {
         // added 0.5 center all the values, because the starting values in the window start from top right
@@ -24,7 +31,12 @@ std::vector<Star> createStars(uint32_t count, float scale) {
         // random depth z for each star
         float const z = dis(gen) * (conf::far - conf::near)+conf::near;
 
-
+        // discard stars in the zone
+        if (star_free_zone.contains(x,y))
+        {
+            ++i;
+            continue;
+        } // else add itin vector
         stars.push_back({{x,y},z});
     }
 
