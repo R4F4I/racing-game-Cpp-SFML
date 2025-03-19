@@ -19,4 +19,5 @@ namespace conf
     float const radius = 8.0f;
     float const far = 4.0f;
     float const near = 1.0f;
+    float const speed = 1.0f;
 }

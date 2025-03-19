@@ -28,6 +28,12 @@ std::vector<Star> createStars(uint32_t count) {
         stars.push_back({{x,y},z});
     }
 
+    // depth ordering
+    std::sort(stars.begin(), stars.end(), [](Star const& s_1, Star const& s_2) {
+        return s_1.z > s_2.z;
+
+        });
+
     return stars;
 }
 
@@ -46,7 +52,14 @@ int main() {
         
         processEvents(window);
 
-        // renderering occurs here 
+        // fake travel toward increasing Z
+
+        for (auto& s:stars)
+        {
+            s.z -= conf::speed * conf::dt;
+        }
+
+        // rendering occurs here 
         window.clear();
 
         sf::CircleShape shape{ conf::radius };
@@ -54,11 +67,22 @@ int main() {
 
         for (auto const & s: stars)
         {
-            // inverse because more depth, lesser the scale
-            float const scale = 1.0 / s.z;
-            shape.setPosition(s.position*scale+conf::window_size_f*0.5f);
-            shape.setScale(scale, scale);
-            window.draw(shape);
+            if (s.z>conf::near)
+            {
+                // inverse because more depth, lesser the scale
+                float const scale = 1.0 / s.z;
+                shape.setPosition(s.position*scale+conf::window_size_f*0.5f);
+                shape.setScale(scale, scale);
+
+
+                float const depth_ratio = (s.z - conf::near) / (conf::far - conf::near);
+                float const color_ratio = 1-depth_ratio;
+                auto const c = static_cast<uint8_t>(color_ratio * 255.0f);
+                shape.setFillColor({ c,c,c });
+
+
+                window.draw(shape);
+            }
         }
 
         window.display();
