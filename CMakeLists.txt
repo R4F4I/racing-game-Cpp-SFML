@@ -66,6 +66,13 @@ endif()
 
 target_sources("${CMAKE_PROJECT_NAME}" PRIVATE ${MY_SOURCES} )
 
+add_custom_command(
+    TARGET ${PROJECT_NAME}
+    COMMENT "Copying resources to build directory"
+    PRE_BUILD COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}/res $<TARGET_FILE_DIR:${PROJECT_NAME}>/res
+
+)
+
 
 if(MSVC) # If using the VS compiler...
 

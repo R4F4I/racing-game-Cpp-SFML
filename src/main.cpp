@@ -1,3 +1,4 @@
+// from: https://github.com/johnBuffer/StarTravelSFML
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
 #include <random>
@@ -81,11 +82,26 @@ int main() {
     auto window = sf::RenderWindow({conf::window_size.x,conf::window_size.y}, "SFML works!");
     window.setFramerateLimit(conf::max_framerate);
 
-    // sf::RenderWindow window(sf::VideoMode(800, 600), "SFML Window");
+    sf::Texture texture;
+
+    texture.loadFromFile("res/star.png");
+    texture.setSmooth(true);
+    texture.generateMipmap();
 
     std::vector<Star> stars = createStars(conf::count,conf::far);
 
     sf::VertexArray va{ sf::PrimitiveType::Quads, 4 * conf::count };
+
+    // displaying texture on the quads
+    auto const texture_size_f = static_cast<sf::Vector2f>(texture.getSize());
+    for (uint32_t idx{conf::count};idx--;)
+    {
+        uint32_t const i = 4 * idx;
+        va[i + 0].texCoords = { 0.0f,0.0f };
+        va[i + 1].texCoords = { texture_size_f.x,0.0f };
+        va[i + 2].texCoords = { texture_size_f.x,texture_size_f.y};
+        va[i + 3].texCoords = { 0.0f,texture_size_f.y};
+    }
 
     uint32_t first = 0;
 
@@ -130,9 +146,11 @@ int main() {
             
         }
 
-        sf::Transform tf;
-        tf.translate(conf::window_size_f * 0.5f);
-        window.draw(va, tf);
+        sf::RenderStates states;
+
+        states.transform.translate(conf::window_size_f * 0.5f);
+        states.texture = &texture;
+        window.draw(va, states);
 
         window.display();
 
