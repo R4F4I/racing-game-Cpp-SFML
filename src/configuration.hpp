@@ -1,49 +1,28 @@
 #pragma once
  
-
+#include <iostream>
  
 namespace conf
  
 {
  
-    // window configuration
- 
-    sf::Vector2u const window_size = { 1920,1080 };
- 
-    sf::Vector2f const window_size_f = static_cast<sf::Vector2f>(window_size);
- 
+    struct playerCarPosition
+    {
+        int x=375;
+        int y=450;
+    };
+    
+    
 
- 
-    uint32_t const max_framerate = 60;
- 
-    float const dt = 1.0f / static_cast<float>(max_framerate);
- 
+    float width = 800;
+    float height = 600;
+    float scrollSpeed = 200.f;
 
- 
-    // The title of the window
- 
-    const char* windowTitle = "SFML Game";
- 
+    float playerCarSpeed = 300.f;
+    float CarsScale = 0.2f;
 
- 
-    // star configuration
- 
+    std::string road = "res/road.png";
+    std::string blueCar = "res/BlueCar.png";
 
- 
-
-    uint32_t const count = 9000;
- 
-
-    uint32_t const count = 100000;
- 
-
- 
-    float const radius = 8.0f;
- 
-    float const far = 7.0f;
- 
-    float const near = 1.0f;
- 
-    float const speed = 1.0f;
 
 }
