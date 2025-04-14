@@ -8,15 +8,14 @@
 
 using namespace std;
 
+float width = conf::width;
+float height = conf::height;
+struct conf::playerCarPosition PcarPos;
+sf::RenderWindow window(sf::VideoMode(width, height), "Racing Game with Textures");
+sf::Texture roadTexture;
 
-int main() {
-    float width = conf::width;
-    float height = conf::height;
-    struct conf::playerCarPosition PcarPos;
-    sf::RenderWindow window(sf::VideoMode(width, height), "Racing Game with Textures");
-
+void loadStructures(){
     // Load road texture
-    sf::Texture roadTexture;
     if (!roadTexture.loadFromFile(conf::road)) {
         std::cerr << "Failed to load road.png\n";
         return -1;
@@ -28,7 +27,11 @@ int main() {
     road1.setPosition(width/2.5, 0);
     road2.setPosition(width/2.5, -roadTexture.getSize().y);
 
-    float scrollSpeed = conf::scrollSpeed;
+    
+
+}
+
+void loadPlayer(){
 
     // Load car texture
     sf::Texture playerCarTexture;
@@ -41,12 +44,10 @@ int main() {
     elements::PlayerCar playerCar(playerCarTexture);
     playerCar.setScale(conf::CarsScale, conf::CarsScale); // Scale if needed
     playerCar.setPosition(PcarPos.x, PcarPos.y); // Center near bottom
+}
 
-    sf::Clock clock;
-
-    // Main game loop
-    while (window.isOpen()) {
-        /* // Clear the console screen
+void debugInfo(){
+    // Clear the console screen
         system("cls"); // Use "clear" instead of "cls" if on Linux/MacOS
 
         // Print information in a readable format
@@ -57,49 +58,74 @@ int main() {
         cout << "Road2 Position: " << road2.getPosition().x << ", " << road2.getPosition().y << endl;
         cout << "Player Car Scale: " << playerCar.getScale().x << ", " << playerCar.getScale().y << endl;
         cout << "Road1 Scale: " << road1.getScale().x << ", " << road1.getScale().y << endl;
-        cout << "=============================" << endl; */
+        cout << "=============================" << endl;
+}
+
+void moveBackground(float scrollSpeed,float deltaTime){
+    road1.move(0, scrollSpeed * deltaTime);
+    road2.move(0, scrollSpeed * deltaTime);
+
+    if (road1.getPosition().y >= roadTexture.getSize().y)
+        road1.setPosition(width/2.5, road2.getPosition().y - roadTexture.getSize().y);
+    if (road2.getPosition().y >= roadTexture.getSize().y)
+        road2.setPosition(width/2.5, road1.getPosition().y - roadTexture.getSize().y);
+}
+
+void updatePlayerPosition(float deltaTime){
+    // left
+    if (pressedLeft())
+        playerCar.moveLeft(deltaTime);
+    // right
+    if (pressedRight())
+        playerCar.moveRight(deltaTime);
+    // up
+    if (pressedUp())
+        playerCar.moveUp(deltaTime);
+    // down
+    if (pressedDown())
+        playerCar.moveDown(deltaTime);
+
+}
+
+void renderElements(elements::background b1,elements::background b2, elements::PlayerCar p){
+    window.clear();
+    window.draw(b1);
+    window.draw(b2);
+    window.draw(p);
+    window.display();
+}
+
+int main() {
+
+    loadStructures();
+    loadPlayer();
+
+    float scrollSpeed = conf::scrollSpeed;
+    sf::Clock clock;
+
+    // Main game loop
+    while (window.isOpen()) {
+        // debugInfo();
         sf::Event event;
         while (window.pollEvent(event)) {
             if (event.type == sf::Event::Closed)
                 window.close();
         }
-
         // close program by pressing ESC
         if (pressedESC()) {
             window.close();
         }
-
-
         float deltaTime = clock.restart().asSeconds();
 
         // Scroll road background
-        road1.move(0, scrollSpeed * deltaTime);
-        road2.move(0, scrollSpeed * deltaTime);
-
-        if (road1.getPosition().y >= roadTexture.getSize().y)
-            road1.setPosition(width/2.5, road2.getPosition().y - roadTexture.getSize().y);
-        if (road2.getPosition().y >= roadTexture.getSize().y)
-            road2.setPosition(width/2.5, road1.getPosition().y - roadTexture.getSize().y);
+        moveBackground(scrollSpeed,deltaTime);
 
         //? Player car movement (basic)
-        // left
-        if (pressedLeft())
-            playerCar.moveLeft(deltaTime);
-        // right
-        if (pressedRight())
-            playerCar.moveRight(deltaTime);
-        // up
-        if (pressedUp())
-            playerCar.moveUp(deltaTime);
-        // down
-        if (pressedDown())
-            playerCar.moveDown(deltaTime);
+        updatePlayerPosition(deltaTime);
 
-        window.clear();
-        window.draw(road1);
-        window.draw(road2);
-        window.draw(playerCar);
-        window.display();
+        // final rendering of all elements to screen
+        renderElements(road1,road2,playerCar);
+        
     }
 
     return 0;
