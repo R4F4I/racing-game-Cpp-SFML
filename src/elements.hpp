@@ -35,6 +35,7 @@ public:
 
 class PlayerCar : public Car {
 public:
+    PlayerCar();
     PlayerCar(const sf::Texture& texture);
 
     void moveLeft(float deltaTime);
@@ -45,6 +46,7 @@ public:
 
 class background : public sf::Sprite {
 public:
+    background();
     background(const sf::Texture& texture);
 };
 

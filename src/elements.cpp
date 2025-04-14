@@ -36,6 +36,9 @@ NPCCar::NPCCar() {
 }
 
 // PlayerCar constructor
+PlayerCar::PlayerCar(){
+    setPosition(100, 100);
+}
 PlayerCar::PlayerCar(const sf::Texture& texture) : sf::Sprite(texture) {
     setPosition(100, 100);
 }
@@ -58,6 +61,9 @@ void PlayerCar::moveDown(float deltaTime) {
 }
 
 // Background constructor
+background::background() {
+    setPosition(0, 0);
+}
 background::background(const sf::Texture& texture) : sf::Sprite(texture) {
     setPosition(0, 0);
 }
