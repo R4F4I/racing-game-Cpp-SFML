@@ -1,6 +1,6 @@
 /out
 bin/
-build/
+build/.vs
 /.vs
 .idea/
 CMakeSettings.json

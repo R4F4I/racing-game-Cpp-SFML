@@ -10,6 +10,10 @@ namespace conf
     {
         int x=375,y=450;
     };
+    struct NPCCarPosition
+    {
+        int x=375,y=-450;
+    };
     
     
 

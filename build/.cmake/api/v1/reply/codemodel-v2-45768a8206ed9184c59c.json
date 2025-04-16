@@ -1,0 +1,1688 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						9,
+						10,
+						11
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						6,
+						9
+					]
+				},
+				{
+					"build" : "thirdparty/SFML-2.6.1",
+					"childIndexes" : 
+					[
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-thirdparty.SFML-2.6.1-Debug-0fcada4a7868c0d471aa.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.7.2"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "thirdparty/SFML-2.6.1",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "thirdparty/SFML-2.6.1/src/SFML",
+					"childIndexes" : 
+					[
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-thirdparty.SFML-2.6.1.src.SFML-Debug-3180e3a6eec2c9dc7219.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.7.2"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "thirdparty/SFML-2.6.1/src/SFML"
+				},
+				{
+					"build" : "thirdparty/SFML-2.6.1/src/SFML/System",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-thirdparty.SFML-2.6.1.src.SFML.System-Debug-c7e16f115da325842013.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.7.2"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "thirdparty/SFML-2.6.1/src/SFML/System",
+					"targetIndexes" : 
+					[
+						14
+					]
+				},
+				{
+					"build" : "thirdparty/SFML-2.6.1/src/SFML/Main",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-thirdparty.SFML-2.6.1.src.SFML.Main-Debug-cfeea6a538c2920ec8d7.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.7.2"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "thirdparty/SFML-2.6.1/src/SFML/Main",
+					"targetIndexes" : 
+					[
+						12
+					]
+				},
+				{
+					"build" : "thirdparty/SFML-2.6.1/src/SFML/Window",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-thirdparty.SFML-2.6.1.src.SFML.Window-Debug-fb71decb3431ddd9aa02.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.7.2"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "thirdparty/SFML-2.6.1/src/SFML/Window",
+					"targetIndexes" : 
+					[
+						15
+					]
+				},
+				{
+					"build" : "thirdparty/SFML-2.6.1/src/SFML/Network",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-thirdparty.SFML-2.6.1.src.SFML.Network-Debug-0cce7e0ab662aca9a1f9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.7.2"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "thirdparty/SFML-2.6.1/src/SFML/Network",
+					"targetIndexes" : 
+					[
+						13
+					]
+				},
+				{
+					"build" : "thirdparty/SFML-2.6.1/src/SFML/Graphics",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-thirdparty.SFML-2.6.1.src.SFML.Graphics-Debug-4ea76382db9eb3746974.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.7.2"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "thirdparty/SFML-2.6.1/src/SFML/Graphics",
+					"targetIndexes" : 
+					[
+						11
+					]
+				},
+				{
+					"build" : "thirdparty/SFML-2.6.1/src/SFML/Audio",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-thirdparty.SFML-2.6.1.src.SFML.Audio-Debug-e53f1cf1abb57c38357a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.7.2"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "thirdparty/SFML-2.6.1/src/SFML/Audio",
+					"targetIndexes" : 
+					[
+						10
+					]
+				},
+				{
+					"build" : "thirdparty/imgui-docking",
+					"jsonFile" : "directory-thirdparty.imgui-docking-Debug-2d492c23c69eb90a2a2a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "thirdparty/imgui-docking",
+					"targetIndexes" : 
+					[
+						3,
+						8
+					]
+				},
+				{
+					"build" : "thirdparty/imgui-sfml-2.6.x",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-thirdparty.imgui-sfml-2.6.x-Debug-e9e6211348d2c4df7b8d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 3,
+					"source" : "thirdparty/imgui-sfml-2.6.x",
+					"targetIndexes" : 
+					[
+						2,
+						5
+					]
+				},
+				{
+					"build" : "thirdparty/glad",
+					"jsonFile" : "directory-thirdparty.glad-Debug-3a35bed35493e33fbec6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 4,
+					"source" : "thirdparty/glad",
+					"targetIndexes" : 
+					[
+						4,
+						7
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "racing-game-Cpp-SFML",
+					"targetIndexes" : 
+					[
+						0,
+						6,
+						9
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					],
+					"name" : "SFML",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						9
+					],
+					"name" : "imgui",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						3,
+						8
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						10
+					],
+					"name" : "imgui_sfml",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						2,
+						5
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						11
+					],
+					"name" : "glad",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						4,
+						7
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ALL_BUILD-Debug-815529cd74d7852c6684.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ALL_BUILD::@fb99800c9122a664a54c",
+					"jsonFile" : "target-ALL_BUILD-Debug-f36c896e02aacfa402de.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "ALL_BUILD::@822bc0e04484a3b610c8",
+					"jsonFile" : "target-ALL_BUILD-Debug-805a568ac7a0913ab4f0.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "ALL_BUILD::@0e4bebfa6e0abb85058b",
+					"jsonFile" : "target-ALL_BUILD-Debug-971b64476d1e971b14c4.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 11,
+					"id" : "ALL_BUILD::@140c1f658771f9cc4abc",
+					"jsonFile" : "target-ALL_BUILD-Debug-4e455cd558e9d8df8d5b.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "ImGui-SFML::@822bc0e04484a3b610c8",
+					"jsonFile" : "target-ImGui-SFML-Debug-cc21eb326d99f349d406.json",
+					"name" : "ImGui-SFML",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ZERO_CHECK-Debug-d1fd1334e742c24e0244.json",
+					"name" : "ZERO_CHECK",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 11,
+					"id" : "glad::@140c1f658771f9cc4abc",
+					"jsonFile" : "target-glad-Debug-6893118be7882f32508c.json",
+					"name" : "glad",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "imgui::@0e4bebfa6e0abb85058b",
+					"jsonFile" : "target-imgui-Debug-3505d69836a982955e58.json",
+					"name" : "imgui",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "racing-game-Cpp-SFML::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-racing-game-Cpp-SFML-Debug-079663ecda0ae7aeceec.json",
+					"name" : "racing-game-Cpp-SFML",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "sfml-audio::@bf0c5d179bfb42057647",
+					"jsonFile" : "target-sfml-audio-Debug-5041429770bfa1daff55.json",
+					"name" : "sfml-audio",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "sfml-graphics::@0854713711bb86ec134b",
+					"jsonFile" : "target-sfml-graphics-Debug-a5d03a495260f8c86c96.json",
+					"name" : "sfml-graphics",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "sfml-main::@9f23af688163a8aa374e",
+					"jsonFile" : "target-sfml-main-Debug-9d39252473d125fcb226.json",
+					"name" : "sfml-main",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "sfml-network::@857784478369b20e4cdf",
+					"jsonFile" : "target-sfml-network-Debug-a8aee4f7750bde5ce5fe.json",
+					"name" : "sfml-network",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "sfml-system::@8216cee0a63fa72c04bf",
+					"jsonFile" : "target-sfml-system-Debug-6706b581ebf458b7c6e9.json",
+					"name" : "sfml-system",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "sfml-window::@83909330983a723b4f9b",
+					"jsonFile" : "target-sfml-window-Debug-f723fdad0bb786d74013.json",
+					"name" : "sfml-window",
+					"projectIndex" : 1
+				}
+			]
+		},
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						9,
+						10,
+						11
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						6,
+						9
+					]
+				},
+				{
+					"build" : "thirdparty/SFML-2.6.1",
+					"childIndexes" : 
+					[
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-thirdparty.SFML-2.6.1-Release-0fcada4a7868c0d471aa.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.7.2"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "thirdparty/SFML-2.6.1",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "thirdparty/SFML-2.6.1/src/SFML",
+					"childIndexes" : 
+					[
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-thirdparty.SFML-2.6.1.src.SFML-Release-3180e3a6eec2c9dc7219.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.7.2"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "thirdparty/SFML-2.6.1/src/SFML"
+				},
+				{
+					"build" : "thirdparty/SFML-2.6.1/src/SFML/System",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-thirdparty.SFML-2.6.1.src.SFML.System-Release-28c377e3c21d6ef3a210.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.7.2"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "thirdparty/SFML-2.6.1/src/SFML/System",
+					"targetIndexes" : 
+					[
+						14
+					]
+				},
+				{
+					"build" : "thirdparty/SFML-2.6.1/src/SFML/Main",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-thirdparty.SFML-2.6.1.src.SFML.Main-Release-a7716973df253770cd15.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.7.2"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "thirdparty/SFML-2.6.1/src/SFML/Main",
+					"targetIndexes" : 
+					[
+						12
+					]
+				},
+				{
+					"build" : "thirdparty/SFML-2.6.1/src/SFML/Window",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-thirdparty.SFML-2.6.1.src.SFML.Window-Release-f036f46cbf5396440d93.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.7.2"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "thirdparty/SFML-2.6.1/src/SFML/Window",
+					"targetIndexes" : 
+					[
+						15
+					]
+				},
+				{
+					"build" : "thirdparty/SFML-2.6.1/src/SFML/Network",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-thirdparty.SFML-2.6.1.src.SFML.Network-Release-7643d37d3923a86ebeb9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.7.2"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "thirdparty/SFML-2.6.1/src/SFML/Network",
+					"targetIndexes" : 
+					[
+						13
+					]
+				},
+				{
+					"build" : "thirdparty/SFML-2.6.1/src/SFML/Graphics",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-thirdparty.SFML-2.6.1.src.SFML.Graphics-Release-cacf9da798ee6457e06f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.7.2"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "thirdparty/SFML-2.6.1/src/SFML/Graphics",
+					"targetIndexes" : 
+					[
+						11
+					]
+				},
+				{
+					"build" : "thirdparty/SFML-2.6.1/src/SFML/Audio",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-thirdparty.SFML-2.6.1.src.SFML.Audio-Release-065d7c1c187aa459007f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.7.2"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "thirdparty/SFML-2.6.1/src/SFML/Audio",
+					"targetIndexes" : 
+					[
+						10
+					]
+				},
+				{
+					"build" : "thirdparty/imgui-docking",
+					"jsonFile" : "directory-thirdparty.imgui-docking-Release-2d492c23c69eb90a2a2a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "thirdparty/imgui-docking",
+					"targetIndexes" : 
+					[
+						3,
+						8
+					]
+				},
+				{
+					"build" : "thirdparty/imgui-sfml-2.6.x",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-thirdparty.imgui-sfml-2.6.x-Release-6101dafcea9fcca9a8e6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 3,
+					"source" : "thirdparty/imgui-sfml-2.6.x",
+					"targetIndexes" : 
+					[
+						2,
+						5
+					]
+				},
+				{
+					"build" : "thirdparty/glad",
+					"jsonFile" : "directory-thirdparty.glad-Release-3a35bed35493e33fbec6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 4,
+					"source" : "thirdparty/glad",
+					"targetIndexes" : 
+					[
+						4,
+						7
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "racing-game-Cpp-SFML",
+					"targetIndexes" : 
+					[
+						0,
+						6,
+						9
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					],
+					"name" : "SFML",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						9
+					],
+					"name" : "imgui",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						3,
+						8
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						10
+					],
+					"name" : "imgui_sfml",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						2,
+						5
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						11
+					],
+					"name" : "glad",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						4,
+						7
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ALL_BUILD-Release-815529cd74d7852c6684.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ALL_BUILD::@fb99800c9122a664a54c",
+					"jsonFile" : "target-ALL_BUILD-Release-f36c896e02aacfa402de.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "ALL_BUILD::@822bc0e04484a3b610c8",
+					"jsonFile" : "target-ALL_BUILD-Release-805a568ac7a0913ab4f0.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "ALL_BUILD::@0e4bebfa6e0abb85058b",
+					"jsonFile" : "target-ALL_BUILD-Release-971b64476d1e971b14c4.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 11,
+					"id" : "ALL_BUILD::@140c1f658771f9cc4abc",
+					"jsonFile" : "target-ALL_BUILD-Release-4e455cd558e9d8df8d5b.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "ImGui-SFML::@822bc0e04484a3b610c8",
+					"jsonFile" : "target-ImGui-SFML-Release-8883b01282344b218178.json",
+					"name" : "ImGui-SFML",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ZERO_CHECK-Release-d1fd1334e742c24e0244.json",
+					"name" : "ZERO_CHECK",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 11,
+					"id" : "glad::@140c1f658771f9cc4abc",
+					"jsonFile" : "target-glad-Release-5d7578c8b5b93a9e115b.json",
+					"name" : "glad",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "imgui::@0e4bebfa6e0abb85058b",
+					"jsonFile" : "target-imgui-Release-e5f4cb371e326925743c.json",
+					"name" : "imgui",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "racing-game-Cpp-SFML::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-racing-game-Cpp-SFML-Release-79a4d39adb18769eef33.json",
+					"name" : "racing-game-Cpp-SFML",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "sfml-audio::@bf0c5d179bfb42057647",
+					"jsonFile" : "target-sfml-audio-Release-82a1df1d6bc269883760.json",
+					"name" : "sfml-audio",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "sfml-graphics::@0854713711bb86ec134b",
+					"jsonFile" : "target-sfml-graphics-Release-7ce3d4beb13431006d52.json",
+					"name" : "sfml-graphics",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "sfml-main::@9f23af688163a8aa374e",
+					"jsonFile" : "target-sfml-main-Release-fdeebd64e1a2f97f98bc.json",
+					"name" : "sfml-main",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "sfml-network::@857784478369b20e4cdf",
+					"jsonFile" : "target-sfml-network-Release-c87245e507cf2a40abca.json",
+					"name" : "sfml-network",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "sfml-system::@8216cee0a63fa72c04bf",
+					"jsonFile" : "target-sfml-system-Release-c16421c49467eb2bd338.json",
+					"name" : "sfml-system",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "sfml-window::@83909330983a723b4f9b",
+					"jsonFile" : "target-sfml-window-Release-baa20660b79e44ffbf1e.json",
+					"name" : "sfml-window",
+					"projectIndex" : 1
+				}
+			]
+		},
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						9,
+						10,
+						11
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-MinSizeRel-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						6,
+						9
+					]
+				},
+				{
+					"build" : "thirdparty/SFML-2.6.1",
+					"childIndexes" : 
+					[
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-thirdparty.SFML-2.6.1-MinSizeRel-0fcada4a7868c0d471aa.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.7.2"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "thirdparty/SFML-2.6.1",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "thirdparty/SFML-2.6.1/src/SFML",
+					"childIndexes" : 
+					[
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-thirdparty.SFML-2.6.1.src.SFML-MinSizeRel-3180e3a6eec2c9dc7219.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.7.2"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "thirdparty/SFML-2.6.1/src/SFML"
+				},
+				{
+					"build" : "thirdparty/SFML-2.6.1/src/SFML/System",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-thirdparty.SFML-2.6.1.src.SFML.System-MinSizeRel-d3689c3b365d9d81bfa1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.7.2"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "thirdparty/SFML-2.6.1/src/SFML/System",
+					"targetIndexes" : 
+					[
+						14
+					]
+				},
+				{
+					"build" : "thirdparty/SFML-2.6.1/src/SFML/Main",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-thirdparty.SFML-2.6.1.src.SFML.Main-MinSizeRel-a57a0a6484d03018500e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.7.2"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "thirdparty/SFML-2.6.1/src/SFML/Main",
+					"targetIndexes" : 
+					[
+						12
+					]
+				},
+				{
+					"build" : "thirdparty/SFML-2.6.1/src/SFML/Window",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-thirdparty.SFML-2.6.1.src.SFML.Window-MinSizeRel-6f4a9adaff391c134322.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.7.2"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "thirdparty/SFML-2.6.1/src/SFML/Window",
+					"targetIndexes" : 
+					[
+						15
+					]
+				},
+				{
+					"build" : "thirdparty/SFML-2.6.1/src/SFML/Network",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-thirdparty.SFML-2.6.1.src.SFML.Network-MinSizeRel-7c8ce96cd9d9002f46b7.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.7.2"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "thirdparty/SFML-2.6.1/src/SFML/Network",
+					"targetIndexes" : 
+					[
+						13
+					]
+				},
+				{
+					"build" : "thirdparty/SFML-2.6.1/src/SFML/Graphics",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-thirdparty.SFML-2.6.1.src.SFML.Graphics-MinSizeRel-e604c28447a8293338e8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.7.2"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "thirdparty/SFML-2.6.1/src/SFML/Graphics",
+					"targetIndexes" : 
+					[
+						11
+					]
+				},
+				{
+					"build" : "thirdparty/SFML-2.6.1/src/SFML/Audio",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-thirdparty.SFML-2.6.1.src.SFML.Audio-MinSizeRel-387afc787152f09d2796.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.7.2"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "thirdparty/SFML-2.6.1/src/SFML/Audio",
+					"targetIndexes" : 
+					[
+						10
+					]
+				},
+				{
+					"build" : "thirdparty/imgui-docking",
+					"jsonFile" : "directory-thirdparty.imgui-docking-MinSizeRel-2d492c23c69eb90a2a2a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "thirdparty/imgui-docking",
+					"targetIndexes" : 
+					[
+						3,
+						8
+					]
+				},
+				{
+					"build" : "thirdparty/imgui-sfml-2.6.x",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-thirdparty.imgui-sfml-2.6.x-MinSizeRel-348cbd7bdaf22305cca6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 3,
+					"source" : "thirdparty/imgui-sfml-2.6.x",
+					"targetIndexes" : 
+					[
+						2,
+						5
+					]
+				},
+				{
+					"build" : "thirdparty/glad",
+					"jsonFile" : "directory-thirdparty.glad-MinSizeRel-3a35bed35493e33fbec6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 4,
+					"source" : "thirdparty/glad",
+					"targetIndexes" : 
+					[
+						4,
+						7
+					]
+				}
+			],
+			"name" : "MinSizeRel",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "racing-game-Cpp-SFML",
+					"targetIndexes" : 
+					[
+						0,
+						6,
+						9
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					],
+					"name" : "SFML",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						9
+					],
+					"name" : "imgui",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						3,
+						8
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						10
+					],
+					"name" : "imgui_sfml",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						2,
+						5
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						11
+					],
+					"name" : "glad",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						4,
+						7
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ALL_BUILD-MinSizeRel-815529cd74d7852c6684.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ALL_BUILD::@fb99800c9122a664a54c",
+					"jsonFile" : "target-ALL_BUILD-MinSizeRel-f36c896e02aacfa402de.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "ALL_BUILD::@822bc0e04484a3b610c8",
+					"jsonFile" : "target-ALL_BUILD-MinSizeRel-805a568ac7a0913ab4f0.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "ALL_BUILD::@0e4bebfa6e0abb85058b",
+					"jsonFile" : "target-ALL_BUILD-MinSizeRel-971b64476d1e971b14c4.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 11,
+					"id" : "ALL_BUILD::@140c1f658771f9cc4abc",
+					"jsonFile" : "target-ALL_BUILD-MinSizeRel-4e455cd558e9d8df8d5b.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "ImGui-SFML::@822bc0e04484a3b610c8",
+					"jsonFile" : "target-ImGui-SFML-MinSizeRel-e2832a8238e8c7ecb3b9.json",
+					"name" : "ImGui-SFML",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ZERO_CHECK-MinSizeRel-d1fd1334e742c24e0244.json",
+					"name" : "ZERO_CHECK",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 11,
+					"id" : "glad::@140c1f658771f9cc4abc",
+					"jsonFile" : "target-glad-MinSizeRel-d4420b1a1c6595d33547.json",
+					"name" : "glad",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "imgui::@0e4bebfa6e0abb85058b",
+					"jsonFile" : "target-imgui-MinSizeRel-9dd2397a8ef5958bbae3.json",
+					"name" : "imgui",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "racing-game-Cpp-SFML::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-racing-game-Cpp-SFML-MinSizeRel-2963b79e10fb09b78cf9.json",
+					"name" : "racing-game-Cpp-SFML",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "sfml-audio::@bf0c5d179bfb42057647",
+					"jsonFile" : "target-sfml-audio-MinSizeRel-3450d30300b2fdf51b2d.json",
+					"name" : "sfml-audio",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "sfml-graphics::@0854713711bb86ec134b",
+					"jsonFile" : "target-sfml-graphics-MinSizeRel-2fb7817bbdfe99694f1d.json",
+					"name" : "sfml-graphics",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "sfml-main::@9f23af688163a8aa374e",
+					"jsonFile" : "target-sfml-main-MinSizeRel-774b7d60a193d3cdca6e.json",
+					"name" : "sfml-main",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "sfml-network::@857784478369b20e4cdf",
+					"jsonFile" : "target-sfml-network-MinSizeRel-ede0cf71d0d2d7b183c5.json",
+					"name" : "sfml-network",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "sfml-system::@8216cee0a63fa72c04bf",
+					"jsonFile" : "target-sfml-system-MinSizeRel-2fa4b05e0c125e442559.json",
+					"name" : "sfml-system",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "sfml-window::@83909330983a723b4f9b",
+					"jsonFile" : "target-sfml-window-MinSizeRel-6a2ce457a2c24c4728f2.json",
+					"name" : "sfml-window",
+					"projectIndex" : 1
+				}
+			]
+		},
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						9,
+						10,
+						11
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-RelWithDebInfo-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						6,
+						9
+					]
+				},
+				{
+					"build" : "thirdparty/SFML-2.6.1",
+					"childIndexes" : 
+					[
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-thirdparty.SFML-2.6.1-RelWithDebInfo-0fcada4a7868c0d471aa.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.7.2"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "thirdparty/SFML-2.6.1",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "thirdparty/SFML-2.6.1/src/SFML",
+					"childIndexes" : 
+					[
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-thirdparty.SFML-2.6.1.src.SFML-RelWithDebInfo-3180e3a6eec2c9dc7219.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.7.2"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "thirdparty/SFML-2.6.1/src/SFML"
+				},
+				{
+					"build" : "thirdparty/SFML-2.6.1/src/SFML/System",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-thirdparty.SFML-2.6.1.src.SFML.System-RelWithDebInfo-8c20966c241ca8561fd0.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.7.2"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "thirdparty/SFML-2.6.1/src/SFML/System",
+					"targetIndexes" : 
+					[
+						14
+					]
+				},
+				{
+					"build" : "thirdparty/SFML-2.6.1/src/SFML/Main",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-thirdparty.SFML-2.6.1.src.SFML.Main-RelWithDebInfo-cafb4e7f2bc968b12e82.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.7.2"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "thirdparty/SFML-2.6.1/src/SFML/Main",
+					"targetIndexes" : 
+					[
+						12
+					]
+				},
+				{
+					"build" : "thirdparty/SFML-2.6.1/src/SFML/Window",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-thirdparty.SFML-2.6.1.src.SFML.Window-RelWithDebInfo-83c0dc0ff601a1290798.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.7.2"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "thirdparty/SFML-2.6.1/src/SFML/Window",
+					"targetIndexes" : 
+					[
+						15
+					]
+				},
+				{
+					"build" : "thirdparty/SFML-2.6.1/src/SFML/Network",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-thirdparty.SFML-2.6.1.src.SFML.Network-RelWithDebInfo-4909cfefa8ba3c9cfc54.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.7.2"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "thirdparty/SFML-2.6.1/src/SFML/Network",
+					"targetIndexes" : 
+					[
+						13
+					]
+				},
+				{
+					"build" : "thirdparty/SFML-2.6.1/src/SFML/Graphics",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-thirdparty.SFML-2.6.1.src.SFML.Graphics-RelWithDebInfo-32e70b1fa6a70dda2a31.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.7.2"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "thirdparty/SFML-2.6.1/src/SFML/Graphics",
+					"targetIndexes" : 
+					[
+						11
+					]
+				},
+				{
+					"build" : "thirdparty/SFML-2.6.1/src/SFML/Audio",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-thirdparty.SFML-2.6.1.src.SFML.Audio-RelWithDebInfo-4f763b6f1347ab1c0e82.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.7.2"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "thirdparty/SFML-2.6.1/src/SFML/Audio",
+					"targetIndexes" : 
+					[
+						10
+					]
+				},
+				{
+					"build" : "thirdparty/imgui-docking",
+					"jsonFile" : "directory-thirdparty.imgui-docking-RelWithDebInfo-2d492c23c69eb90a2a2a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "thirdparty/imgui-docking",
+					"targetIndexes" : 
+					[
+						3,
+						8
+					]
+				},
+				{
+					"build" : "thirdparty/imgui-sfml-2.6.x",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-thirdparty.imgui-sfml-2.6.x-RelWithDebInfo-75c3d68411fc1f45b010.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 3,
+					"source" : "thirdparty/imgui-sfml-2.6.x",
+					"targetIndexes" : 
+					[
+						2,
+						5
+					]
+				},
+				{
+					"build" : "thirdparty/glad",
+					"jsonFile" : "directory-thirdparty.glad-RelWithDebInfo-3a35bed35493e33fbec6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 4,
+					"source" : "thirdparty/glad",
+					"targetIndexes" : 
+					[
+						4,
+						7
+					]
+				}
+			],
+			"name" : "RelWithDebInfo",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "racing-game-Cpp-SFML",
+					"targetIndexes" : 
+					[
+						0,
+						6,
+						9
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					],
+					"name" : "SFML",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						9
+					],
+					"name" : "imgui",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						3,
+						8
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						10
+					],
+					"name" : "imgui_sfml",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						2,
+						5
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						11
+					],
+					"name" : "glad",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						4,
+						7
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-815529cd74d7852c6684.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ALL_BUILD::@fb99800c9122a664a54c",
+					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-f36c896e02aacfa402de.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "ALL_BUILD::@822bc0e04484a3b610c8",
+					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-805a568ac7a0913ab4f0.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "ALL_BUILD::@0e4bebfa6e0abb85058b",
+					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-971b64476d1e971b14c4.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 11,
+					"id" : "ALL_BUILD::@140c1f658771f9cc4abc",
+					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-4e455cd558e9d8df8d5b.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "ImGui-SFML::@822bc0e04484a3b610c8",
+					"jsonFile" : "target-ImGui-SFML-RelWithDebInfo-d47e33de5c7b1c7bffa1.json",
+					"name" : "ImGui-SFML",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ZERO_CHECK-RelWithDebInfo-d1fd1334e742c24e0244.json",
+					"name" : "ZERO_CHECK",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 11,
+					"id" : "glad::@140c1f658771f9cc4abc",
+					"jsonFile" : "target-glad-RelWithDebInfo-7e947c7705131bb548b0.json",
+					"name" : "glad",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "imgui::@0e4bebfa6e0abb85058b",
+					"jsonFile" : "target-imgui-RelWithDebInfo-1c96086edcefd57b8184.json",
+					"name" : "imgui",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "racing-game-Cpp-SFML::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-racing-game-Cpp-SFML-RelWithDebInfo-e911d2707bcd75403113.json",
+					"name" : "racing-game-Cpp-SFML",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "sfml-audio::@bf0c5d179bfb42057647",
+					"jsonFile" : "target-sfml-audio-RelWithDebInfo-bfc269fac439312a4b9c.json",
+					"name" : "sfml-audio",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "sfml-graphics::@0854713711bb86ec134b",
+					"jsonFile" : "target-sfml-graphics-RelWithDebInfo-a0c2f3d88c22e542264e.json",
+					"name" : "sfml-graphics",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "sfml-main::@9f23af688163a8aa374e",
+					"jsonFile" : "target-sfml-main-RelWithDebInfo-58e12bc9b2343f4cb96b.json",
+					"name" : "sfml-main",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "sfml-network::@857784478369b20e4cdf",
+					"jsonFile" : "target-sfml-network-RelWithDebInfo-b7cfafabd9455c6991f5.json",
+					"name" : "sfml-network",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "sfml-system::@8216cee0a63fa72c04bf",
+					"jsonFile" : "target-sfml-system-RelWithDebInfo-d178e325dcc60057a5b1.json",
+					"name" : "sfml-system",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "sfml-window::@83909330983a723b4f9b",
+					"jsonFile" : "target-sfml-window-RelWithDebInfo-e2df766ecc849f79ae35.json",
+					"name" : "sfml-window",
+					"projectIndex" : 1
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/rafay/CPP/projects/racing-game-Cpp-SFML/build",
+		"source" : "D:/rafay/CPP/projects/racing-game-Cpp-SFML"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 8
+	}
+}

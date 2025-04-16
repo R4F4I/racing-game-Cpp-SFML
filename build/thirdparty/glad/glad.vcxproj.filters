@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\glad\src\glad.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\glad\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{A9E4C0F1-90D9-3B6D-AE64-D5691D943F35}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\src\elements.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\src\keyControls.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\src\configuration.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{7A7A5EFA-CFEC-3AB0-8081-05F8A21B36EB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{A9E4C0F1-90D9-3B6D-AE64-D5691D943F35}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

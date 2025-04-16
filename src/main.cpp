@@ -16,6 +16,7 @@ using namespace std;
 float width = conf::width;
 float height = conf::height;
 struct conf::playerCarPosition PcarPos;
+struct conf::NPCCarPosition NPCcarPos;
 sf::RenderWindow window(sf::VideoMode(width, height), conf::windowTitle);
 
 ///////////////////////////////////////////////////
@@ -26,6 +27,7 @@ sf::Texture roadTexture;
 ///////////////////////////////////////////////////
 //? declare car texture
 sf::Texture playerCarTexture;
+sf::Texture NPCCarTexture;
 
 ///////////////////////////////////////////////////
 
@@ -36,6 +38,7 @@ elements::background road2;
 ///////////////////////////////////////////////////
 //? declare playerCar // constructor only called in loadPlayer()
 elements::PlayerCar playerCar;
+elements::PlayerCar NPCCar;
 ///////////////////////////////////////////////////
 
 
@@ -59,7 +62,7 @@ int loadStructures(){
 
 int loadPlayer(){
 
-    if (!playerCarTexture.loadFromFile(conf::orangeCar)) {
+    if (!playerCarTexture.loadFromFile(conf::blueCar)) {
         std::cerr << "Failed to load player texture\n";
         return -1;
     }
@@ -70,21 +73,16 @@ int loadPlayer(){
     playerCar.setPosition(PcarPos.x, PcarPos.y); // Center near bottom
 }
 
+int loadNPCs(){
+    if (!NPCCarTexture.loadFromFile(conf::orangeCar)) {
+        std::cerr << "Failed to load NPC1 texture\n";
+        return -1;
+    }
 
+    NPCCar = elements::PlayerCar(NPCCarTexture);
 
-void debugInfo(sf::Clock clock){
-    // Clear the console screen
-        system("cls"); // Use "clear" instead of "cls" if on Linux/MacOS
-
-        // Print information in a readable format
-        cout << "=============================" << endl;
-        cout << "FPS: " << 1.f / clock.restart().asSeconds() << endl;
-        cout << "Player Car Position: " << playerCar.getPosition().x << ", " << playerCar.getPosition().y << endl;
-        cout << "Road1 Position: " << road1.getPosition().x << ", " << road1.getPosition().y << endl;
-        cout << "Road2 Position: " << road2.getPosition().x << ", " << road2.getPosition().y << endl;
-        cout << "Player Car Scale: " << playerCar.getScale().x << ", " << playerCar.getScale().y << endl;
-        cout << "Road1 Scale: " << road1.getScale().x << ", " << road1.getScale().y << endl;
-        cout << "=============================" << endl;
+    NPCCar.setScale(conf::CarsScale, conf::CarsScale); // Scale if needed
+    NPCCar.setPosition(NPCcarPos.x, NPCcarPos.y); // Center near bottom
 }
 
 void moveBackground(float scrollSpeed,float deltaTime){
@@ -98,31 +96,53 @@ void moveBackground(float scrollSpeed,float deltaTime){
 }
 
 
-// todo: function that checks if player car is out of bounds
+// checks if player car is out of bounds
+//y<0
+//y>height
+//x<0
+//x>width
+
 // the function returns 
-//  1 if the player is above    the screen //y<0
-//  2 if the player is below    the screen //y>height
-//  3 if the player is left of  the screen //x<0
-//  4 if the player is right of the screen //x>width
+//  1 2 3 
+//  4 0 6
+//  7 8 9
+//  1: x<0      && y<0
+//  2: y<0 
+//  3: y<0      && x>width
+//  4: x<0
+//  6: x>width
+//  7: x<0      && y>height
+//  8: y>height
+//  9: x>width  && y>height
+//  for the following boundaries
+//  note: since the function can only return one value at a time, it is not possible to check for multiple boundaries at once hence we function can determine whether the player is at a corner
+//  or not. for this the corner cases have to be explicitly defined
 int playerBounds() {
-    // Top boundary
-    if (playerCar.getPosition().y < 0) {
-        return 1;
+
+    if (playerCar.getPosition().x < 0 || playerCar.getPosition().x + 10 > width || playerCar.getPosition().y < 0 || playerCar.getPosition().y + 10 > height) {
+        // Nested clauses for specific boundaries and corners
+        if (playerCar.getPosition().x < 0 && playerCar.getPosition().y < 0) {
+            return 1; // Top-left corner
+        } else if (playerCar.getPosition().y < 0 && playerCar.getPosition().x + 10 > width) {
+            return 3; // Top-right corner
+        } else if (playerCar.getPosition().x < 0 && playerCar.getPosition().y + 10 > height) {
+            return 7; // Bottom-left corner
+        } else if (playerCar.getPosition().x + 10 > width && playerCar.getPosition().y + 10 > height) {
+            return 9; // Bottom-right corner
+        } else if (playerCar.getPosition().y < 0) {
+            return 2; // Top boundary
+        } else if (playerCar.getPosition().x < 0) {
+            return 4; // Left boundary
+        } else if (playerCar.getPosition().x + 10 > width) {
+            return 6; // Right boundary
+        } else if (playerCar.getPosition().y + 10 > height) {
+            return 8; // Bottom boundary
+        }
+    } else {
+        // No boundary reached
+        return 0;
     }
-    // Bottom boundary (account for car height)
-    if (playerCar.getPosition().y /* + playerCar.getGlobalBounds().height */ > height-20) {
-        return 2;
-    }
-    // Left boundary
-    if (playerCar.getPosition().x < 0) {
-        return 3;
-    }
-    // Right boundary (account for car width)
-    if (playerCar.getPosition().x /* + playerCar.getGlobalBounds().width */ > width-20) {
-        return 4;
-    }
-    // No boundary reached
-    return 0;
+
 }
 
 void updatePlayerPosition(float deltaTime){
@@ -130,20 +150,37 @@ void updatePlayerPosition(float deltaTime){
 
 
     // Left movement (only if the player is not at the left boundary)
-    if (pressedLeft() && bounds != 3)
+    if (pressedLeft()   && bounds != 1 && bounds != 4 && bounds != 7)
         playerCar.moveLeft(deltaTime);
 
     // Right movement (only if the player is not at the right boundary)
-    if (pressedRight() && bounds != 4)
+    if (pressedRight()  && bounds != 3 && bounds != 6 && bounds != 9)
         playerCar.moveRight(deltaTime);
 
     // Up movement (only if the player is not at the top boundary)
-    if (pressedUp() && bounds != 1)
+    if (pressedUp()     && bounds != 1 && bounds != 2 && bounds != 3)
         playerCar.moveUp(deltaTime);
 
     // Down movement (only if the player is not at the bottom boundary)
-    if (pressedDown() && bounds != 2)
+    if (pressedDown()   && bounds != 7 && bounds != 8 && bounds != 9)
         playerCar.moveDown(deltaTime);
+}
+
+void debugInfo(sf::Clock clock){
+    // Clear the console screen
+        system("cls"); // Use "clear" instead of "cls" if on Linux/MacOS
+
+        // Print information in a readable format
+        cout << "=============================" << endl;
+        cout << "screen res: " << width << ", " << height << endl;
+        cout << "FPS: " << 1.f / clock.restart().asSeconds() << endl;
+        cout << "Player Car Position: " << playerCar.getPosition().x << ", " << playerCar.getPosition().y << endl;
+        cout << "Road1 Position: " << road1.getPosition().x << ", " << road1.getPosition().y << endl;
+        cout << "Road2 Position: " << road2.getPosition().x << ", " << road2.getPosition().y << endl;
+        cout << "Player Car Scale: " << playerCar.getScale().x << ", " << playerCar.getScale().y << endl;
+        cout << "Road1 Scale: " << road1.getScale().x << ", " << road1.getScale().y << endl;
+        cout << "Bound: " << playerBounds() << endl;
+        cout << "=============================" << endl;
 }
 
 void renderElements(elements::background b1,elements::background b2, elements::PlayerCar p){

@@ -1,0 +1,55 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"thirdparty/SFML-2.6.1/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"id" : "sfml-window::@83909330983a723b4f9b"
+		},
+		{
+			"id" : "sfml-network::@857784478369b20e4cdf"
+		},
+		{
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
+		},
+		{
+			"id" : "sfml-system::@8216cee0a63fa72c04bf"
+		},
+		{
+			"id" : "sfml-main::@9f23af688163a8aa374e"
+		},
+		{
+			"id" : "sfml-graphics::@0854713711bb86ec134b"
+		},
+		{
+			"id" : "sfml-audio::@bf0c5d179bfb42057647"
+		}
+	],
+	"folder" : 
+	{
+		"name" : "CMake"
+	},
+	"id" : "ALL_BUILD::@fb99800c9122a664a54c",
+	"isGeneratorProvided" : true,
+	"name" : "ALL_BUILD",
+	"paths" : 
+	{
+		"build" : "thirdparty/SFML-2.6.1",
+		"source" : "thirdparty/SFML-2.6.1"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

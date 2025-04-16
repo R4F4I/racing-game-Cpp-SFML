@@ -1,0 +1,18 @@
+{
+	"InstallScripts" : 
+	[
+		"D:/rafay/CPP/projects/racing-game-Cpp-SFML/build/cmake_install.cmake",
+		"D:/rafay/CPP/projects/racing-game-Cpp-SFML/build/thirdparty/SFML-2.6.1/cmake_install.cmake",
+		"D:/rafay/CPP/projects/racing-game-Cpp-SFML/build/thirdparty/SFML-2.6.1/src/SFML/cmake_install.cmake",
+		"D:/rafay/CPP/projects/racing-game-Cpp-SFML/build/thirdparty/SFML-2.6.1/src/SFML/System/cmake_install.cmake",
+		"D:/rafay/CPP/projects/racing-game-Cpp-SFML/build/thirdparty/SFML-2.6.1/src/SFML/Main/cmake_install.cmake",
+		"D:/rafay/CPP/projects/racing-game-Cpp-SFML/build/thirdparty/SFML-2.6.1/src/SFML/Window/cmake_install.cmake",
+		"D:/rafay/CPP/projects/racing-game-Cpp-SFML/build/thirdparty/SFML-2.6.1/src/SFML/Network/cmake_install.cmake",
+		"D:/rafay/CPP/projects/racing-game-Cpp-SFML/build/thirdparty/SFML-2.6.1/src/SFML/Graphics/cmake_install.cmake",
+		"D:/rafay/CPP/projects/racing-game-Cpp-SFML/build/thirdparty/SFML-2.6.1/src/SFML/Audio/cmake_install.cmake",
+		"D:/rafay/CPP/projects/racing-game-Cpp-SFML/build/thirdparty/imgui-docking/cmake_install.cmake",
+		"D:/rafay/CPP/projects/racing-game-Cpp-SFML/build/thirdparty/imgui-sfml-2.6.x/cmake_install.cmake",
+		"D:/rafay/CPP/projects/racing-game-Cpp-SFML/build/thirdparty/glad/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

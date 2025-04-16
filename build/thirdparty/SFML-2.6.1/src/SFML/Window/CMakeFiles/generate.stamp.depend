@@ -1,0 +1,6 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-4.0/Modules/FindOpenGL.cmake
+C:/Program Files/CMake/share/cmake-4.0/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-4.0/Modules/FindPackageMessage.cmake
+D:/rafay/CPP/projects/racing-game-Cpp-SFML/build/CMakeFiles/cmake.verify_globs
+D:/rafay/CPP/projects/racing-game-Cpp-SFML/thirdparty/SFML-2.6.1/src/SFML/Window/CMakeLists.txt
