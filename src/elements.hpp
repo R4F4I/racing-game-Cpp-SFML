@@ -10,10 +10,12 @@ namespace elements {
 class Car : public virtual sf::Sprite {
 private:
     std::string color, model;
-    int topSpeed;
+    float topSpeed;
 
 public:
-    Car(std::string color = "Red", std::string model = "Toyota", int topSpeed = 200);
+    float speed;
+    friend void valueSetter();
+    Car(std::string color = "Red", std::string model = "Toyota", float topSpeed = 20.f, float speed = 0.f);
 };
 
 class truck : public Car {
@@ -22,7 +24,7 @@ private:
 
 public:
     truck();
-    truck(std::string color, std::string model, int topSpeed, int size);
+    truck(std::string color, std::string model, float topSpeed, int size);
 };
 
 class NPCCar : public Car {
@@ -38,10 +40,10 @@ public:
     PlayerCar();
     PlayerCar(const sf::Texture& texture);
 
-    void moveLeft(float deltaTime);
-    void moveRight(float deltaTime);
-    void moveUp(float deltaTime);
-    void moveDown(float deltaTime);
+    void moveLeft(float deltaTime, float speed);
+    void moveRight(float deltaTime, float speed);
+    void moveUp(float deltaTime, float speed);
+    void moveDown(float deltaTime, float speed);
 };
 
 class background : public sf::Sprite {

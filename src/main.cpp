@@ -38,9 +38,14 @@ elements::background road2;
 ///////////////////////////////////////////////////
 //? declare playerCar // constructor only called in loadPlayer()
 elements::PlayerCar playerCar;
-elements::PlayerCar NPCCar;
+elements::PlayerCar NPC1Car;
 ///////////////////////////////////////////////////
-
+//assign speeds
+void valueSetter(){
+    // Set the speed of the player car and NPC car
+    playerCar.speed = conf::playerCarSpeed;
+    NPC1Car.speed = conf::NPCCarSpeed;
+}
 
 //-----------------------------------------------//
 
@@ -74,15 +79,15 @@ int loadPlayer(){
 }
 
 int loadNPCs(){
-    if (!NPCCarTexture.loadFromFile(conf::orangeCar)) {
+    if (!NPCCarTexture.loadFromFile(conf::whiteCar)) {
         std::cerr << "Failed to load NPC1 texture\n";
         return -1;
     }
 
-    NPCCar = elements::PlayerCar(NPCCarTexture);
+    NPC1Car = elements::PlayerCar(NPCCarTexture);
 
-    NPCCar.setScale(conf::CarsScale, conf::CarsScale); // Scale if needed
-    NPCCar.setPosition(NPCcarPos.x, NPCcarPos.y); // Center near bottom
+    NPC1Car.setScale(conf::CarsScale, conf::CarsScale); // Scale if needed
+    NPC1Car.setPosition(NPCcarPos.x, NPCcarPos.y); // Center near bottom
 }
 
 void moveBackground(float scrollSpeed,float deltaTime){
@@ -94,13 +99,13 @@ void moveBackground(float scrollSpeed,float deltaTime){
     if (road2.getPosition().y >= roadTexture.getSize().y)
         road2.setPosition(width/2.5, road1.getPosition().y - roadTexture.getSize().y);
 }
+void moveNPCs(float scrollSpeed,float deltaTime){
+    NPC1Car.move(0, scrollSpeed * deltaTime);
 
+    if (NPC1Car.getPosition().y > height+30)
+        NPC1Car.setPosition(NPCcarPos.x, NPCcarPos.y);
+}
 
-// checks if player car is out of bounds
-//y<0
-//y>height
-//x<0
-//x>width
 
 // the function returns 
 //  1 2 3 
@@ -126,9 +131,9 @@ int playerBounds() {
         } else if (playerCar.getPosition().y < 0 && playerCar.getPosition().x + 10 > width) {
             return 3; // Top-right corner
         } else if (playerCar.getPosition().x < 0 && playerCar.getPosition().y + 10 > height) {
-            return 7; // Bottom-left corner
+            return 0; //7; // Bottom-left corner
         } else if (playerCar.getPosition().x + 10 > width && playerCar.getPosition().y + 10 > height) {
-            return 9; // Bottom-right corner
+            return 0; //9; // Bottom-right corner
         } else if (playerCar.getPosition().y < 0) {
             return 2; // Top boundary
         } else if (playerCar.getPosition().x < 0) {
@@ -136,7 +141,7 @@ int playerBounds() {
         } else if (playerCar.getPosition().x + 10 > width) {
             return 6; // Right boundary
         } else if (playerCar.getPosition().y + 10 > height) {
-            return 8; // Bottom boundary
+            return 0; //8; // Bottom boundary
         }
     } else {
         // No boundary reached
@@ -145,26 +150,51 @@ int playerBounds() {
 
 }
 
-void updatePlayerPosition(float deltaTime){
+
+bool collision(sf::Sprite s1, sf::Sprite s2) {
+    
+    // Check if the bounding boxes of the two sprites intersect
+    return s1.getGlobalBounds().intersects(s2.getGlobalBounds());
+}
+
+/* bool playerCollision(){
+    if (collision(playerCar, NPCCar)) {
+        // Handle collision (e.g., reset player position, reduce health, etc.)
+        // std::cout << "Collision detected!" << std::endl;
+        return true; // Collision occurred
+    }
+    return false; // No collision
+    
+} */
+
+
+void movePlayer(float deltaTime, float speed){
     int bounds = playerBounds();
 
+    // player will down with the NPC car if they collide
+    if (collision(playerCar, NPC1Car))
+    {
+        playerCar.moveDown(deltaTime, conf::NPCCarSpeed); // move down if collision occurs
+    }
+    
 
     // Left movement (only if the player is not at the left boundary)
     if (pressedLeft()   && bounds != 1 && bounds != 4 && bounds != 7)
-        playerCar.moveLeft(deltaTime);
+        playerCar.moveLeft(deltaTime, speed);
 
     // Right movement (only if the player is not at the right boundary)
     if (pressedRight()  && bounds != 3 && bounds != 6 && bounds != 9)
-        playerCar.moveRight(deltaTime);
+        playerCar.moveRight(deltaTime, speed);
 
     // Up movement (only if the player is not at the top boundary)
     if (pressedUp()     && bounds != 1 && bounds != 2 && bounds != 3)
-        playerCar.moveUp(deltaTime);
+        playerCar.moveUp(deltaTime, speed);
 
     // Down movement (only if the player is not at the bottom boundary)
     if (pressedDown()   && bounds != 7 && bounds != 8 && bounds != 9)
-        playerCar.moveDown(deltaTime);
+        playerCar.moveDown(deltaTime, speed);
 }
+
 
 void debugInfo(sf::Clock clock){
     // Clear the console screen
@@ -175,19 +205,28 @@ void debugInfo(sf::Clock clock){
         cout << "screen res: " << width << ", " << height << endl;
         cout << "FPS: " << 1.f / clock.restart().asSeconds() << endl;
         cout << "Player Car Position: " << playerCar.getPosition().x << ", " << playerCar.getPosition().y << endl;
+        cout << "NPC Car Position: " << NPC1Car.getPosition().x << ", " << NPC1Car.getPosition().y << endl;
         cout << "Road1 Position: " << road1.getPosition().x << ", " << road1.getPosition().y << endl;
         cout << "Road2 Position: " << road2.getPosition().x << ", " << road2.getPosition().y << endl;
         cout << "Player Car Scale: " << playerCar.getScale().x << ", " << playerCar.getScale().y << endl;
         cout << "Road1 Scale: " << road1.getScale().x << ", " << road1.getScale().y << endl;
         cout << "Bound: " << playerBounds() << endl;
+        cout << "Collision: " << collision(playerCar, NPC1Car) << endl;
         cout << "=============================" << endl;
 }
 
-void renderElements(elements::background b1,elements::background b2, elements::PlayerCar p){
-    window.clear(conf::bgColor);
+void renderElements(
+    elements::background b1,
+    elements::background b2, 
+    elements::PlayerCar p1,
+    elements::PlayerCar p2
+){
+    // order of render determines the position of the elements
+    window.clear(conf::darkGreen);
     window.draw(b1);
     window.draw(b2);
-    window.draw(p);
+    window.draw(p1);
+    window.draw(p2);
 
    /*  // window size test
     // Create a transparent black rectangle
@@ -207,15 +246,17 @@ int main() {
     
 
     if (
-        loadPlayer() == -1||
-        loadStructures() == -1
+        // order of loading determines the order of rendering
+        loadNPCs() == -1
+        ||loadPlayer() == -1
+        ||loadStructures() == -1
     ) {
         std::cerr << "Failed to load \n";
         return -1;
     }
     
 
-    float scrollSpeed = conf::scrollSpeed;
+    // float roadScrollSpeed = conf::roadScrollSpeed;
     sf::Clock clock;
 
     // Main game loop
@@ -235,13 +276,18 @@ int main() {
         float deltaTime = clock.restart().asSeconds();
 
         //? Scroll road background
-        moveBackground(scrollSpeed,deltaTime);
+        moveBackground(conf::roadScrollSpeed,deltaTime);
+        
+
+        //? Scroll NPCs background
+        moveNPCs(conf::NPCScrollSpeed,deltaTime);
+
 
         //? Player car movement (basic)
-        updatePlayerPosition(deltaTime);
+        movePlayer(deltaTime, 300); // this is the speed with which the player car ACROSS moves
 
         //? final rendering of all elements to screen
-        renderElements(road1,road2,playerCar);
+        renderElements(road1,road2,playerCar,NPC1Car);
     }
     return 0;
 }

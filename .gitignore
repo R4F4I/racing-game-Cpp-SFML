@@ -6,3 +6,4 @@ build/.cmake
 .idea/
 CMakeSettings.json
 Makefile
+.idea/

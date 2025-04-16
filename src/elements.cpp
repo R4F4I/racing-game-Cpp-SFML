@@ -11,10 +11,11 @@ namespace elements
 {
 
 // Car constructor
-Car::Car(std::string color, std::string model, int topSpeed) {
+Car::Car(std::string color, std::string model, float topSpeed, float speed) {
     this->color = color;
     this->model = model;
     this->topSpeed = topSpeed;
+    this->speed = speed;
 }
 
 // Truck constructors
@@ -22,7 +23,7 @@ truck::truck() : Car() {
     size = 10;
 }
 
-truck::truck(std::string color, std::string model, int topSpeed, int size)
+truck::truck(std::string color, std::string model, float topSpeed, int size)
     : Car(color, model, topSpeed) {
     this->size = size;
 }
@@ -44,20 +45,20 @@ PlayerCar::PlayerCar(const sf::Texture& texture) : sf::Sprite(texture) {
 }
 
 // Movement methods
-void PlayerCar::moveLeft(float deltaTime) {
-    this->sf::Sprite::move(-300 * deltaTime, 0);
+void PlayerCar::moveLeft(float deltaTime,float speed) {
+    this->sf::Sprite::move(-speed * deltaTime, 0);
 }
 
-void PlayerCar::moveRight(float deltaTime) {
-    this->sf::Sprite::move(300 * deltaTime, 0);
+void PlayerCar::moveRight(float deltaTime,float speed) {
+    this->sf::Sprite::move(speed * deltaTime, 0);
 }
 
-void PlayerCar::moveUp(float deltaTime) {
-    this->sf::Sprite::move(0, -300 * deltaTime);
+void PlayerCar::moveUp(float deltaTime,float speed) {
+    this->sf::Sprite::move(0, -speed * deltaTime);
 }
 
-void PlayerCar::moveDown(float deltaTime) {
-    this->sf::Sprite::move(0, 300 * deltaTime);
+void PlayerCar::moveDown(float deltaTime,float speed) {
+    this->sf::Sprite::move(0, speed * deltaTime);
 }
 
 // Background constructor
