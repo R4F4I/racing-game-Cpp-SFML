@@ -153,22 +153,45 @@ int playerBounds() {
 
 bool collision(sf::Sprite s1, sf::Sprite s2) {
     
-    // Check if the bounding boxes of the two sprites intersect
+     // Check if the bounding boxes of the two sprites intersect
+     // todo: this collision works for road craters
+     // for cars the player must not be able to move inside the car
     return s1.getGlobalBounds().intersects(s2.getGlobalBounds());
+    /*
+    // collision of player only from front
+    float a1[2] = {s1.getPosition().x                               , s1.getPosition().y};
+    float a2[2] = {s1.getPosition().x + s1.getGlobalBounds().width  , s1.getPosition().y};
+    float a3[2] = {s1.getPosition().x                               , s1.getPosition().y + s1.getGlobalBounds().height};
+    float a4[2] = {s1.getPosition().x + s1.getGlobalBounds().width  , s1.getPosition().y + s1.getGlobalBounds().height};
+    
+    float b1[2] = {s2.getPosition().x                               , s2.getPosition().y};
+    float b2[2] = {s2.getPosition().x + s2.getGlobalBounds().width  , s2.getPosition().y};
+    float b3[2] = {s2.getPosition().x                               , s2.getPosition().y + s2.getGlobalBounds().height};
+    float b4[2] = {s2.getPosition().x + s2.getGlobalBounds().width  , s2.getPosition().y + s2.getGlobalBounds().height};
+    
+
+    if (a1<b2 ||a1<b4 || a2<b1 || a2<b3) {
+        // Collision detected
+        return true;
+    } else {
+        // No collision
+        return false;
+    } */
 }
 
-/* bool playerCollision(){
-    if (collision(playerCar, NPCCar)) {
+// all collisions
+bool playerCollision(){
+    if (collision(playerCar, NPC1Car)) {
         // Handle collision (e.g., reset player position, reduce health, etc.)
         // std::cout << "Collision detected!" << std::endl;
         return true; // Collision occurred
     }
     return false; // No collision
     
-} */
+}
 
 
-void movePlayer(float deltaTime, float speed){
+void movePlayer(float deltaTime, float speedVert, float speedHorz){
     int bounds = playerBounds();
 
     // player will down with the NPC car if they collide
@@ -180,19 +203,19 @@ void movePlayer(float deltaTime, float speed){
 
     // Left movement (only if the player is not at the left boundary)
     if (pressedLeft()   && bounds != 1 && bounds != 4 && bounds != 7)
-        playerCar.moveLeft(deltaTime, speed);
+        playerCar.moveLeft(deltaTime, speedHorz);
 
     // Right movement (only if the player is not at the right boundary)
     if (pressedRight()  && bounds != 3 && bounds != 6 && bounds != 9)
-        playerCar.moveRight(deltaTime, speed);
+        playerCar.moveRight(deltaTime, speedHorz);
 
     // Up movement (only if the player is not at the top boundary)
-    if (pressedUp()     && bounds != 1 && bounds != 2 && bounds != 3)
-        playerCar.moveUp(deltaTime, speed);
+    if (pressedUp()     && bounds != 1 && bounds != 2 && bounds != 3 && !collision(playerCar, NPC1Car))
+        playerCar.moveUp(deltaTime, speedVert);
 
     // Down movement (only if the player is not at the bottom boundary)
     if (pressedDown()   && bounds != 7 && bounds != 8 && bounds != 9)
-        playerCar.moveDown(deltaTime, speed);
+        playerCar.moveDown(deltaTime, speedVert);
 }
 
 
@@ -212,6 +235,7 @@ void debugInfo(sf::Clock clock){
         cout << "Road1 Scale: " << road1.getScale().x << ", " << road1.getScale().y << endl;
         cout << "Bound: " << playerBounds() << endl;
         cout << "Collision: " << collision(playerCar, NPC1Car) << endl;
+        cout << "Player Car Width, Height: " << playerCar.getGlobalBounds().width <<", "<<playerCar.getGlobalBounds().height<< endl;
         cout << "=============================" << endl;
 }
 
@@ -242,9 +266,6 @@ void renderElements(
 
 
 int main() {
-
-    
-
     if (
         // order of loading determines the order of rendering
         loadNPCs() == -1
@@ -284,7 +305,7 @@ int main() {
 
 
         //? Player car movement (basic)
-        movePlayer(deltaTime, 300); // this is the speed with which the player car ACROSS moves
+        movePlayer(deltaTime, 300,250); // this is the speed with which the player car ACROSS moves
 
         //? final rendering of all elements to screen
         renderElements(road1,road2,playerCar,NPC1Car);

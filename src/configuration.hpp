@@ -5,20 +5,23 @@
 namespace conf
  
 {
- 
+    float width = 800;
+    float height = 499;
+
+    struct center
+    {
+        int x=width/2,y=height/2;
+    };
+
     struct playerCarPosition
     {
-        int x=375,y=450;
+        int x=375,y=300;
     };
     struct NPCCarPosition
     {
         int x=375,y=-450;
     };
-    
-    
 
-    float width = 800;
-    float height = 499;
     
     ///////////////////////////
     // car speed vs scroll speed
@@ -34,11 +37,11 @@ namespace conf
     float playerScrollSpeed = roadScrollSpeed - playerCarSpeed; // is 0,
     ///////////////////////////
 
-    float CarsScale = 0.2f;
+    float CarsScale = 0.6f;
 
     std::string road = "res/road.png";
-    std::string blueCar = "res/BlueCar.png";
-    std::string whiteCar = "res/WhiteCar.png";
+    std::string blueCar = "res/Cars/Cars-04-37.png";
+    std::string whiteCar = "res/Cars/Cars-04-15.png";
     std::string orangeCar = "res/OrangeCar.png";
     std::string windowTitle = "Racing Game by Rafay & Salman";
 
