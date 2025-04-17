@@ -1,6 +1,8 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
 #include <SFML/System.hpp>
+#include <cstdlib>         // For std::rand and std::srand
+#include <ctime>          // For std::time
 #include <iostream>
 #include "elements.hpp"
 #include "keyControls.hpp"
@@ -10,7 +12,7 @@ using namespace std;
 
 //  DECLARATIONS
 //-----------------------------------------------//
-
+sf::Clock gameClock;
 ///////////////////////////////////////////////////
 //? Main game window
 float width = conf::width;
@@ -29,6 +31,13 @@ sf::Texture roadTexture;
 sf::Texture playerCarTexture;
 sf::Texture NPCCarTexture;
 
+namespace conf{
+    carColor carColors;
+    std::string* colors[48] = {&carColors.red1, &carColors.black1, &carColors.yellow1, &carColors.blue1, &carColors.purple1, &carColors.green1, &carColors.orange1, &carColors.brown1,&carColors.red2, &carColors.gray1, &carColors.cream, &carColors.blue2, &carColors.pink1, &carColors.lime, &carColors.white, &carColors.peach, &carColors.brown2,&carColors.darkgray, &carColors.yellow2, &carColors.navy, &carColors.purple2, &carColors.green2, &carColors.orange2, &carColors.black2, &carColors.red3,&carColors.brown3, &carColors.yellow3, &carColors.blue3, &carColors.pink2, &carColors.green3, &carColors.gray2, &carColors.beige, &carColors.red4, &carColors.gray3,&carColors.yellow4, &carColors.blue4, &carColors.purple3, &carColors.green4, &carColors.orange3, &carColors.brown4, &carColors.peach2, &carColors.red5,&carColors.gray4, &carColors.yellow5, &carColors.blue5, &carColors.green5, &carColors.orange4, &carColors.brown5};
+}
+
+
+
 ///////////////////////////////////////////////////
 
 ///////////////////////////////////////////////////
@@ -40,6 +49,28 @@ elements::background road2;
 elements::PlayerCar playerCar;
 elements::PlayerCar NPC1Car;
 ///////////////////////////////////////////////////
+
+///////////////////////////////////////////////////
+
+// rand gen
+int getRandomNumber(sf::Clock& clock, int min = 0, int max = 47) {
+    // Use the elapsed time from the clock as a seed
+    std::srand(static_cast<unsigned int>(std::time(nullptr)));
+
+    // Generate a random number between 0 and 47
+    return min + std::rand() % (max - min + 1);
+}
+
+float getRandomNumber(sf::Clock& clock, float min, float max) {
+    // Use the elapsed time from the clock as a seed
+    // std::srand(RAND_MAX);
+
+    std::srand(static_cast<unsigned int>(std::time(nullptr)));
+    // Generate a random float between min and max
+    float random = static_cast<float>(std::rand()+10) / static_cast<float>(RAND_MAX); // Random value between 0 and 1
+    return min + random * (max - min); // Scale to the range [min, max]
+}
+
 //assign speeds
 void valueSetter(){
     // Set the speed of the player car and NPC car
@@ -60,32 +91,42 @@ int loadStructures(){
     road1 = elements::background(roadTexture);
     road2 = elements::background(roadTexture);
 
-    road1.setPosition(width/2.5, 0);
-    road2.setPosition(width/2.5, -roadTexture.getSize().y);
+    
+    // roadTexture.getSize().x is width of the road texture
+    road1.setPosition((width-roadTexture.getSize().x)/2, 0);
+    road2.setPosition((width-roadTexture.getSize().x)/2, -roadTexture.getSize().y);
+
+    return 0;
 
 }
 
-int loadPlayer(){
 
-    if (!playerCarTexture.loadFromFile(conf::blueCar)) {
+
+int loadPlayer(){
+    
+    std::cout << "Loading player car texture: " << conf::carColors.purple3 << std::endl;
+    if (!playerCarTexture.loadFromFile(conf::carColors.purple3)) {
         std::cerr << "Failed to load player texture\n";
         return -1;
     }
-
+    
     playerCar = elements::PlayerCar(playerCarTexture);
+    playerCar.topSpeed = conf::playerCarTopSpeed; // Set the top speed of the player car
 
     playerCar.setScale(conf::CarsScale, conf::CarsScale); // Scale if needed
     playerCar.setPosition(PcarPos.x, PcarPos.y); // Center near bottom
+    
+    return 0;
 }
 
-int loadNPCs(){
-    if (!NPCCarTexture.loadFromFile(conf::whiteCar)) {
+int loadNPCs(int carColorIndex){
+    if (!NPCCarTexture.loadFromFile(*conf::colors[carColorIndex])) {
         std::cerr << "Failed to load NPC1 texture\n";
         return -1;
     }
-
+    
     NPC1Car = elements::PlayerCar(NPCCarTexture);
-
+    
     NPC1Car.setScale(conf::CarsScale, conf::CarsScale); // Scale if needed
     NPC1Car.setPosition(NPCcarPos.x, NPCcarPos.y); // Center near bottom
 }
@@ -93,17 +134,27 @@ int loadNPCs(){
 void moveBackground(float scrollSpeed,float deltaTime){
     road1.move(0, scrollSpeed * deltaTime);
     road2.move(0, scrollSpeed * deltaTime);
-
+    
+    // width-roadTexture.getSize().x explanation:
+    // for (width of the screen - width of the road) give us an offset
+    // when centering, if we directly used width/2 the road position the road will look 'off' because the road's position is set from left side, (width- getsize.x)/2 gives us a better result, however (width- getsize.x) is too long and complex to follow
     if (road1.getPosition().y >= roadTexture.getSize().y)
-        road1.setPosition(width/2.5, road2.getPosition().y - roadTexture.getSize().y);
+    road1.setPosition((width-roadTexture.getSize().x)/2, road2.getPosition().y - roadTexture.getSize().y);
+    // road1.setPosition(width/2.5, road2.getPosition().y - roadTexture.getSize().y);
     if (road2.getPosition().y >= roadTexture.getSize().y)
-        road2.setPosition(width/2.5, road1.getPosition().y - roadTexture.getSize().y);
+    road2.setPosition((width-roadTexture.getSize().x)/2, road1.getPosition().y - roadTexture.getSize().y);
+    // road2.setPosition(width/2.5, road1.getPosition().y - roadTexture.getSize().y);
 }
+
+int roadLanes[2] = {398,547}; // road lanes for NPC cars
+
 void moveNPCs(float scrollSpeed,float deltaTime){
     NPC1Car.move(0, scrollSpeed * deltaTime);
 
-    if (NPC1Car.getPosition().y > height+30)
-        NPC1Car.setPosition(NPCcarPos.x, NPCcarPos.y);
+    if (NPC1Car.getPosition().y > height+30){
+        loadNPCs(getRandomNumber(gameClock,0,47)); // reload the NPC car if it goes off screen
+        NPC1Car.setPosition(getRandomNumber(gameClock,roadLanes[0],roadLanes[1]), NPCcarPos.y); // Center near bottom
+    }
 }
 
 
@@ -122,8 +173,7 @@ void moveNPCs(float scrollSpeed,float deltaTime){
 //  for the following boundaries
 //  note: since the function can only return one value at a time, it is not possible to check for multiple boundaries at once hence we function can determine whether the player is at a corner
 //  or not. for this the corner cases have to be explicitly defined
-int playerBounds() {
-
+static int playerBounds() {
     if (playerCar.getPosition().x < 0 || playerCar.getPosition().x + 10 > width || playerCar.getPosition().y < 0 || playerCar.getPosition().y + 10 > height) {
         // Nested clauses for specific boundaries and corners
         if (playerCar.getPosition().x < 0 && playerCar.getPosition().y < 0) {
@@ -152,42 +202,15 @@ int playerBounds() {
 
 
 bool collision(sf::Sprite s1, sf::Sprite s2) {
-    
-     // Check if the bounding boxes of the two sprites intersect
-     // todo: this collision works for road craters
-     // for cars the player must not be able to move inside the car
     return s1.getGlobalBounds().intersects(s2.getGlobalBounds());
-    /*
-    // collision of player only from front
-    float a1[2] = {s1.getPosition().x                               , s1.getPosition().y};
-    float a2[2] = {s1.getPosition().x + s1.getGlobalBounds().width  , s1.getPosition().y};
-    float a3[2] = {s1.getPosition().x                               , s1.getPosition().y + s1.getGlobalBounds().height};
-    float a4[2] = {s1.getPosition().x + s1.getGlobalBounds().width  , s1.getPosition().y + s1.getGlobalBounds().height};
-    
-    float b1[2] = {s2.getPosition().x                               , s2.getPosition().y};
-    float b2[2] = {s2.getPosition().x + s2.getGlobalBounds().width  , s2.getPosition().y};
-    float b3[2] = {s2.getPosition().x                               , s2.getPosition().y + s2.getGlobalBounds().height};
-    float b4[2] = {s2.getPosition().x + s2.getGlobalBounds().width  , s2.getPosition().y + s2.getGlobalBounds().height};
-    
-
-    if (a1<b2 ||a1<b4 || a2<b1 || a2<b3) {
-        // Collision detected
-        return true;
-    } else {
-        // No collision
-        return false;
-    } */
 }
 
 // all collisions
 bool playerCollision(){
     if (collision(playerCar, NPC1Car)) {
-        // Handle collision (e.g., reset player position, reduce health, etc.)
-        // std::cout << "Collision detected!" << std::endl;
         return true; // Collision occurred
     }
     return false; // No collision
-    
 }
 
 
@@ -232,10 +255,11 @@ void debugInfo(sf::Clock clock){
         cout << "Road1 Position: " << road1.getPosition().x << ", " << road1.getPosition().y << endl;
         cout << "Road2 Position: " << road2.getPosition().x << ", " << road2.getPosition().y << endl;
         cout << "Player Car Scale: " << playerCar.getScale().x << ", " << playerCar.getScale().y << endl;
-        cout << "Road1 Scale: " << road1.getScale().x << ", " << road1.getScale().y << endl;
+        cout << "Road dimensions: " << roadTexture.getSize().x << ", " << roadTexture.getSize().y << endl;
         cout << "Bound: " << playerBounds() << endl;
         cout << "Collision: " << collision(playerCar, NPC1Car) << endl;
         cout << "Player Car Width, Height: " << playerCar.getGlobalBounds().width <<", "<<playerCar.getGlobalBounds().height<< endl;
+        cout << "rand num, rl1 , rl2,size: " << getRandomNumber(gameClock,roadLanes[0],roadLanes[1]) <<", "<<roadLanes[0]<<", "<< roadLanes[1]<<", "<<roadTexture.getSize().x << endl;
         cout << "=============================" << endl;
 }
 
@@ -266,9 +290,11 @@ void renderElements(
 
 
 int main() {
+    std::srand(static_cast<unsigned int>(std::time(nullptr))); // creating rand seed
+    float roadScrollSpeed = conf::roadScrollSpeed;
     if (
         // order of loading determines the order of rendering
-        loadNPCs() == -1
+        loadNPCs(0) == -1
         ||loadPlayer() == -1
         ||loadStructures() == -1
     ) {
@@ -278,12 +304,12 @@ int main() {
     
 
     // float roadScrollSpeed = conf::roadScrollSpeed;
-    sf::Clock clock;
+    
 
     // Main game loop
     while (window.isOpen()) {
         
-        debugInfo(clock);
+        debugInfo(gameClock);
         
         sf::Event event;
         while (window.pollEvent(event)) {
@@ -294,10 +320,26 @@ int main() {
         if (pressedESC()) {
             window.close();
         }
-        float deltaTime = clock.restart().asSeconds();
+        float deltaTime = gameClock.restart().asSeconds();
+
+        conf::NPCScrollSpeed = conf::playerCarSpeed - conf::NPCCarSpeed; // should this be redefined in main ?
+
+        // increasing acceleration on press up
+        if (pressedUp()) {
+            conf::playerCarAcceleration += 20; // increase the acceleration of the road 
+        } else if (pressedDown()) {
+            conf::playerCarAcceleration -= 20; // decrease the acceleration of the road 
+        } else
+
+        
+
+        // only speed up until top speed is reached
+        if (playerCar.topSpeed > conf::playerCarSpeed) {
+            conf::playerCarSpeed += conf::playerCarAcceleration * deltaTime; // increase the speed of the road 
+        } 
 
         //? Scroll road background
-        moveBackground(conf::roadScrollSpeed,deltaTime);
+        moveBackground(conf::playerCarSpeed,deltaTime);
         
 
         //? Scroll NPCs background
@@ -310,5 +352,8 @@ int main() {
         //? final rendering of all elements to screen
         renderElements(road1,road2,playerCar,NPC1Car);
     }
+    
+    // delete conf::colors[48];
+
     return 0;
 }
