@@ -2,7 +2,5 @@
   main.cpp
   Generating code
   Not all modules are compiled with -Gy (function comdat), build without incremental LTCG.
-D:\rafay\CPP\projects\racing-game-Cpp-SFML\src\main.cpp(201): warning C4715: 'playerBounds': not all control paths return a value
-D:\rafay\CPP\projects\racing-game-Cpp-SFML\src\main.cpp(132): warning C4715: 'loadNPCs': not all control paths return a value
   Finished generating code
   racing-game-Cpp-SFML.vcxproj -> D:\rafay\CPP\projects\racing-game-Cpp-SFML\build\Debug\racing-game-Cpp-SFML.exe

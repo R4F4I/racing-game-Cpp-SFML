@@ -1,0 +1,114 @@
+/* [
+    {
+    // wrap a selection with single quotes (')
+    "key": "'",
+    "command": "editor.action.insertSnippet",
+    "when": "editorHasSelection && editorTextFocus",
+    "args": {"snippet": "'$TM_SELECTED_TEXT'"}
+    },
+    {
+        // wrap a selection with double quotes (")
+        "key": "shift+'",
+        "command": "editor.action.insertSnippet",
+        "when": "editorHasSelection && editorTextFocus",
+        "args": {"snippet": "\"$TM_SELECTED_TEXT\""}
+    },
+    {
+        // wrap a selection with back ticks (`)
+        "key": "`",
+        "command": "editor.action.insertSnippet",
+        "when": "editorHasSelection && editorTextFocus",
+        "args": {"snippet": "`$TM_SELECTED_TEXT`"}
+    },
+    {
+        // wrap a selection with stars (*)
+        "key": "shift+8",
+        "command": "editor.action.insertSnippet",
+        "when": "editorHasSelection && editorTextFocus",
+        "args": {"snippet": "*$TM_SELECTED_TEXT*"}
+    },
+    {
+        // wrap a selection with underscores (_)
+        "key": "shift+-",
+        "command": "editor.action.insertSnippet",
+        "when": "editorHasSelection && editorTextFocus",
+        "args": {"snippet": "_$TM_SELECTED_TEXT_"}
+    },
+    {
+        // wrap a selection with tildes (~)
+        "key": "shift+`",
+        "command": "editor.action.insertSnippet",
+        "when": "editorHasSelection && editorTextFocus",
+        "args": {"snippet": "~$TM_SELECTED_TEXT~"}
+    },
+    {
+        // wrap a selection with dashes (-)
+        "key": "-",
+        "command": "editor.action.insertSnippet",
+        "when": "editorHasSelection && editorTextFocus",
+        "args": {"snippet": "-$TM_SELECTED_TEXT-"}
+    },
+    {
+        // wrap a selection with pluses (+)
+        "key": "=",
+        "command": "editor.action.insertSnippet",
+        "when": "editorHasSelection && editorTextFocus",
+        "args": {"snippet": "+$TM_SELECTED_TEXT+"}
+    },
+    {
+        // wrap a selection with slashes (/)
+        "key": "/",
+        "command": "editor.action.insertSnippet",
+        "when": "editorHasSelection && editorTextFocus",
+        "args": {"snippet": "/$TM_SELECTED_TEXT/"}
+    },
+    {
+        // wrap a selection with pipes (|)
+        "key": "|",
+        "command": "editor.action.insertSnippet",
+        "when": "editorHasSelection && editorTextFocus",
+        "args": {"snippet": "|$TM_SELECTED_TEXT|"}
+    },
+    {
+        // wrap a selection with brackets ([])
+        "key": "[",
+        "command": "editor.action.insertSnippet",
+        "when": "editorHasSelection && editorTextFocus",
+        "args": {"snippet": "[$TM_SELECTED_TEXT]"}
+    },
+    {
+        // wrap a selection with braces ({ })
+        "key": "{",
+        "command": "editor.action.insertSnippet",
+        "when": "editorHasSelection && editorTextFocus",
+        "args": {"snippet": "{$TM_SELECTED_TEXT}"}
+    },
+    {
+        // wrap a selection with parentheses (( ))
+        "key": "(",
+        "command": "editor.action.insertSnippet",
+        "when": "editorHasSelection && editorTextFocus",
+        "args": {"snippet": "($TM_SELECTED_TEXT)"}
+    },
+    {
+        // wrap a selection with angle brackets (< >)
+        "key": "<",
+        "command": "editor.action.insertSnippet",
+        "when": "editorHasSelection && editorTextFocus",
+        "args": {"snippet": "<$TM_SELECTED_TEXT>"}
+    },
+    {
+        // wrap a selection with carets (^)
+        "key": "^",
+        "command": "editor.action.insertSnippet",
+        "when": "editorHasSelection && editorTextFocus",
+        "args": {"snippet": "^$TM_SELECTED_TEXT^"}
+    },
+    {
+        // wrap a selection with ampersands (&)
+        "key": "&",
+        "command": "editor.action.insertSnippet",
+        "when": "editorHasSelection && editorTextFocus",
+        "args": {"snippet": "&$TM_SELECTED_TEXT&"}
+    }
+] */
