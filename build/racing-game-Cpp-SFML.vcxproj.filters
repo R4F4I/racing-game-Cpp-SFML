@@ -10,6 +10,9 @@
     <ClCompile Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\src\keyControls.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\src\gameFunctions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\src\configuration.hpp">

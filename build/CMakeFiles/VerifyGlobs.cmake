@@ -5,6 +5,7 @@
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "D:/rafay/CPP/projects/racing-game-Cpp-SFML/src/*.cpp")
 set(OLD_GLOB
   "D:/rafay/CPP/projects/racing-game-Cpp-SFML/src/elements.cpp"
+  "D:/rafay/CPP/projects/racing-game-Cpp-SFML/src/gameFunctions.cpp"
   "D:/rafay/CPP/projects/racing-game-Cpp-SFML/src/keyControls.cpp"
   "D:/rafay/CPP/projects/racing-game-Cpp-SFML/src/main.cpp"
   )

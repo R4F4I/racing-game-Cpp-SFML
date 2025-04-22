@@ -392,6 +392,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\src\elements.cpp" />
     <ClCompile Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\src\keyControls.cpp" />
     <ClInclude Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\src\configuration.hpp" />
+    <ClCompile Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\src\gameFunctions.cpp" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
