@@ -5,14 +5,14 @@
 namespace conf
  
 {
-    float WindowWidth = 1000;
-    float WindowHeight = 499;
+    float WindowWidth = 800;
+    float WindowHeight = 970;
 
     struct position{
         float x,y;
     };
     
-    struct position center = {width/2,height/2};
+    struct position WindowCenter = {WindowWidth/2,WindowHeight/2};
     struct position PcarPos = {375.f,300.f};
     struct position NPCcarPos[3]  = {
         {404.f, 300.f},    // NPC1CarPosition
@@ -35,9 +35,10 @@ namespace conf
     // Drag (when off-road)
     float Drag = 200.f;
     // Road lanes for NPC cars
-    int roadLanes[2] = {404, 540};
+    // int roadLanes[2] = {404, 540};
     ///////////////////////////
 
+    float roadScale = 0.4f;
     float CarsScale = 0.6f;
 
     std::string road = "res/road.png";
