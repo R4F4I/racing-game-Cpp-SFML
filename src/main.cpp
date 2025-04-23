@@ -18,8 +18,8 @@ using namespace std;
 sf::Clock gameClock;
 ///////////////////////////////////////////////////
 //? Main game window
-float width = conf::width;
-float height = conf::height;
+float width = conf::WindowWidth;
+float height = conf::WindowHeight;
 sf::RenderWindow window(sf::VideoMode(width, height), conf::windowTitle);
 
 ///////////////////////////////////////////////////
@@ -42,18 +42,17 @@ elements::background road2;
 elements::PlayerCar playerCar;
 elements::PlayerCar NPCCars[3];
 ///////////////////////////////////////////////////
+// define scroll speeds
+
+float roadScrollSpeed = conf::playerCarSpeed;// speed of the road
+float NPCScrollSpeed[3] = {
+    conf::NPCCarSpeed[0] - roadScrollSpeed, 
+    conf::NPCCarSpeed[1] - roadScrollSpeed, 
+    conf::NPCCarSpeed[2] - roadScrollSpeed
+};
+
 
 ///////////////////////////////////////////////////
-
-
-//assign speeds
-void valueSetter(){
-    // Set the speed of the player car and NPC car
-    playerCar.speed = conf::playerCarSpeed;
-    NPCCars[0].speed = conf::NPCCarSpeed[0];
-    NPCCars[1].speed = conf::NPCCarSpeed[1];
-    NPCCars[2].speed = conf::NPCCarSpeed[2];
-}
 
 //-----------------------------------------------//
 
@@ -63,16 +62,11 @@ int loadStructures(){
         std::cerr << "Failed to load road.png\n";
         return -1;
     }
-
-
     road1 = elements::background(roadTexture);
     road2 = elements::background(roadTexture);
-
-    
     // roadTexture.getSize().x is width of the road texture
     road1.setPosition((width-roadTexture.getSize().x)/2, 0);
     road2.setPosition((width-roadTexture.getSize().x)/2, -roadTexture.getSize().y);
-
     return 0;
 
 }
@@ -111,7 +105,7 @@ void moveBackground(float scrollSpeed,float deltaTime){
         road2.setPosition(static_cast<float>((width-roadTexture.getSize().x)/2),static_cast<float>( road1.getPosition().y - roadTexture.getSize().y));
 }
 
-int roadLanes[2] = {404,540}; // road lanes for NPC cars
+// int roadLanes[2] = {404,540}; // road lanes for NPC cars
 
 // specialized function loaded only once in main
 int load_n_NPC(int n,int i){
@@ -126,7 +120,7 @@ int load_n_NPC(int n,int i){
             conf::carColors,
             func::getRandomNumber(gameClock,0,47),
             conf::NPCcarPos[i].x,
-            conf::NPCcarPos[(i + 2) % 3].y - 200, // prevents overlapping of NPC cars // for for f(i) = (i + 2) % 3, f(0) = 2, f(1) = 0, f(2) = 1
+            conf::NPCcarPos[i /* (i + 2) % 3 */].y /* - 200 */, // prevents overlapping of NPC cars // for for f(i) = (i + 2) % 3, f(0) = 2, f(1) = 0, f(2) = 1
             conf::CarsScale
         ) == -1) // reload the NPC car if it goes off screen
     {
@@ -137,16 +131,13 @@ int load_n_NPC(int n,int i){
     
 }
 
-void moveNPCs(float scrollSpeed1,float scrollSpeed2, float deltaTime){
-    int rand = 0;
-    for (size_t i = 0; i < 3; i++){
-        NPCCars[i].move(0, scrollSpeed1 * deltaTime);
-        if (NPCCars[i].getPosition().y > height + 30){
-            rand = func::getRandomNumber(gameClock, roadLanes[0], roadLanes[1]);
-            conf::NPCcarPos[i].x = rand;                                                 // update the NPC car position
-            conf::NPCcarPos[i].y -= static_cast<int>(func::getRandomNumber(gameClock, 0, 500)); // update the NPC car position
-            load_n_NPC(func::getRandomNumber(gameClock, 0, 47),i); // i the ith npc car being loaded
-        }
+void moveNPC(int index,float scrollSpeed, float deltaTime){
+    
+    NPCCars[index].move(0, scrollSpeed * deltaTime);
+    if (NPCCars[index].getPosition().y > height + 30){
+        conf::NPCcarPos[index].x =  static_cast<int>(func::getRandomNumber(gameClock, conf::roadLanes[0], conf::roadLanes[1]));  // update the NPC car position
+        conf::NPCcarPos[index].y -= static_cast<int>(func::getRandomNumber(gameClock, 0, 500));                      // update the NPC car position
+        load_n_NPC(func::getRandomNumber(gameClock, 0, 47),index); // i the ith npc car being loaded
     }
 }
 
@@ -252,6 +243,15 @@ void movePlayer(float dT, float speedVert, float speedHorz){
             playerCar.moveDown(dT, conf::NPCCarSpeed[i]); // move down WITH the NPC1 Car if collision occurs
         }
     }
+    if (playerCollisionDirectionAnyNPC()== -1)
+    {
+        playerCar.moveRight(dT, 20); // move right if collision occurs
+    } else if (playerCollisionDirectionAnyNPC()== 1)
+    {
+        playerCar.moveLeft(dT, 20); // move left  if collision occurs
+    }
+    
+    
 
     // Left movement (only if the player is not at the left boundary)
     if (key::pressedLeft()   && bounds != 1 && bounds != 4 && bounds != 7 && (playerCollisionDirectionAnyNPC()!=-1) )
@@ -287,7 +287,7 @@ void hideCursor() {
 }
 
 void debugInfo(sf::Clock clock){
-        cursorUp(18);
+        cursorUp(19);
 
         // Print information in a readable format
         for (size_t i = 0; i < 51; i++)
@@ -295,22 +295,23 @@ void debugInfo(sf::Clock clock){
             cout << "=";
         }
         cout<<endl;
-        cout /* << left << setw(30) */ << "Screen res:           " /* << right */ << width << ", " << height << "\n";
-        cout /* << left << setw(30) */ << "FPS:                  " /* << right */ << 1.f / clock.restart().asSeconds() << "\n";
-        cout /* << left << setw(30) */ << "Player Car Position:  " /* << right */ << playerCar.getPosition().x << ", " << playerCar.getPosition().y << "\n";
-        cout /* << left << setw(30) */ << "NPC1 Car Position:    " /* << right */ << NPCCars[0].getPosition().x << ", " << NPCCars[0].getPosition().y << "\n";
-        cout /* << left << setw(30) */ << "NPC2 Car Position:    " /* << right */ << NPCCars[1].getPosition().x << ", " << NPCCars[1].getPosition().y << "\n";
-        cout /* << left << setw(30) */ << "NPC3 Car Position:    " /* << right */ << NPCCars[2].getPosition().x << ", " << NPCCars[2].getPosition().y << "\n";
-        cout /* << left << setw(30) */ << "Road1 Position:       " /* << right */ << road1.getPosition().x << ", " << road1.getPosition().y << "\n";
-        cout /* << left << setw(30) */ << "Road2 Position:       " /* << right */ << road2.getPosition().x << ", " << road2.getPosition().y << "\n";
-        cout /* << left << setw(30) */ << "Player Car Scale:     " /* << right */ << playerCar.getScale().x << ", " << playerCar.getScale().y << "\n";
-        cout /* << left << setw(30) */ << "Player speed:         " /* << right */ << conf::playerCarSpeed << "\n";
-        cout /* << left << setw(30) */ << "Road dimensions:      " /* << right */ << roadTexture.getSize().x << ", " << roadTexture.getSize().y << "\n";
-        cout /* << left << setw(30) */ << "Bound:                " /* << right */ << playerBounds() << "\n";
-        cout /* << left << setw(30) */ << "Collision npc1:       " /* << right */ << collision(playerCar,NPCCars[0]) << "\n";
-        cout /* << left << setw(30) */ << "Collision npc2:       " /* << right */ << collision(playerCar,NPCCars[1]) << "\n";
-        cout /* << left << setw(30) */ << "Collision npc3:       " /* << right */ << collision(playerCar,NPCCars[2]) << "\n";
-        cout /* << left << setw(30) */ << "Car W x H:            " /* << right */ << playerCar.getGlobalBounds().width << ", " << playerCar.getGlobalBounds().height << endl;
+        cout << "Screen res:           " << width << ", " << height << "\n";
+        cout << "FPS:                  " << 1.f / clock.restart().asSeconds() << "\n";
+        cout << "Player Car Position:  " << playerCar.getPosition().x << ", " << playerCar.getPosition().y << "\n";
+        cout << "NPC1 Car Position:    " << NPCCars[0].getPosition().x << ", " << NPCCars[0].getPosition().y << "\n";
+        cout << "NPC2 Car Position:    " << NPCCars[1].getPosition().x << ", " << NPCCars[1].getPosition().y << "\n";
+        cout << "NPC3 Car Position:    " << NPCCars[2].getPosition().x << ", " << NPCCars[2].getPosition().y << "\n";
+        cout << "Road1 Position:       " << road1.getPosition().x << ", " << road1.getPosition().y << "\n";
+        cout << "Road2 Position:       " << road2.getPosition().x << ", " << road2.getPosition().y << "\n";
+        cout << "Road speed:           " << roadScrollSpeed << "\n";
+        cout << "Player Car Scale:     " << playerCar.getScale().x << ", " << playerCar.getScale().y << "\n";
+        cout << "Player speed:         " << conf::playerCarSpeed << " npc1 speed:         " /* << right */ << NPCScrollSpeed[0] << " npc2 speed:         " /* << right */ << NPCScrollSpeed[1] << " npc3 speed:         " /* << right */ << NPCScrollSpeed[2] << "\n";
+        cout << "Road dimensions:      " << roadTexture.getSize().x << ", " << roadTexture.getSize().y << "\n";
+        cout << "Bound:                " << playerBounds() << "\n";
+        cout << "Collision npc1:       " << collision(playerCar,NPCCars[0]) << "\n";
+        cout << "Collision npc2:       " << collision(playerCar,NPCCars[1]) << "\n";
+        cout << "Collision npc3:       " << collision(playerCar,NPCCars[2]) << "\n";
+        cout << "Car W x H:            " << playerCar.getGlobalBounds().width << ", " << playerCar.getGlobalBounds().height << endl;
         // cout /* << left << setw(30) */ << "rand, rl1, rl2, size: " /* << right */ << getRandomNumber(gameClock, roadLanes[0], roadLanes[1]) << ", " << roadLanes[0] << ", " << roadLanes[1] << ", " << roadTexture.getSize().x << endl;
         
         for (size_t i = 0; i < 51; i++)
@@ -321,31 +322,31 @@ void debugInfo(sf::Clock clock){
 }
 
 void gameStep(float dT){
-    conf::NPCScrollSpeed[0] = conf::playerCarSpeed - conf::NPCCarSpeed[0]; // should this be redefined in main ?
-    conf::NPCScrollSpeed[1] = conf::playerCarSpeed - conf::NPCCarSpeed[1]; // should this be redefined in main ?
-    conf::NPCScrollSpeed[2] = conf::playerCarSpeed - conf::NPCCarSpeed[2]; // should this be redefined in main ?
 
+        float roadScrollSpeed = conf::playerCarSpeed; // redefine road scroll speed as player car speed is also being redefined
+        
         // increasing acceleration on press up
         if (key::pressedUp()) {
-            conf::playerCarAcceleration += 20; // increase the acceleration of the road 
+            conf::playerCarAcceleration += 5; // increase the acceleration of the road 
         } else if (key::pressedDown() && conf::playerCarSpeed > 0) {
-            conf::playerCarAcceleration -= 20; // decrease the acceleration of the road 
+            conf::playerCarAcceleration -= 5; // decrease the acceleration of the road 
         } else
         // only speed up until top speed is reached
         if (playerCar.topSpeed > conf::playerCarSpeed) {
-            conf::playerCarSpeed += conf::playerCarAcceleration * dT; // increase the speed of the road 
+            conf::playerCarSpeed += conf::playerCarAcceleration * dT; // increase the speed of the road // v = u + a*dt
         }
 
         //? Scroll road background
-        moveBackground(conf::playerCarSpeed,dT);
+        moveBackground(roadScrollSpeed,dT);
         
-
         //? Scroll NPCs background
-        moveNPCs(conf::NPCScrollSpeed[0],conf::NPCScrollSpeed[1], dT);
-
+        for (size_t i = 0; i < 3; i++)
+        {
+            moveNPC(i,NPCScrollSpeed[i], dT);
+        }
 
         //? Player car movement (basic)
-        movePlayer(dT, 250,250); // this is the speed with which the player car ACROSS moves
+        movePlayer(dT, conf::swerveVert,conf::swerveHorz); // this is the speed with which the player car ACROSS moves
 }
 
 void renderElements(){
@@ -377,7 +378,7 @@ void initWindowEvents(){
 int main() {
     hideCursor();
     // std::srand(static_cast<unsigned int>(std::time(nullptr))); // creating rand seed
-    float roadScrollSpeed = conf::roadScrollSpeed;
+    // float roadScrollSpeed = conf::roadScrollSpeed;
     if (
         // order of loading determines the order of rendering
           load_n_NPC(0,0)  == -1
@@ -412,8 +413,6 @@ int main() {
         //? final rendering of all elements to screen
         renderElements();
     }
-    
-    // delete conf::colors[48];
 
     return 0;
 }
