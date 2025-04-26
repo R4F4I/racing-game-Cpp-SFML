@@ -14,12 +14,12 @@ using namespace std;
 
 //  DECLARATIONS
 //-----------------------------------------------//
-sf::Clock gameClock;
+sf::Clock gameClock, scoreClock;// ;
 ///////////////////////////////////////////////////
 //? Main game window
-float width = conf::WindowWidth;
-float height = conf::WindowHeight;
-sf::RenderWindow window(sf::VideoMode(width, height), conf::windowTitle);
+float WIDTH = conf::WindowWidth;
+float HEIGHT = conf::WindowHeight;
+sf::RenderWindow window(sf::VideoMode(WIDTH,HEIGHT), conf::windowTitle);
 
 ///////////////////////////////////////////////////
 //? declare road texture
@@ -73,9 +73,9 @@ int loadStructures(){
     roadScaledHeight = roadTexture.getSize().y * road1.getScale().y;
     roadScaledWidth = roadTexture.getSize().x * road1.getScale().x;
     
-    road1.setPosition((width-roadScaledWidth)/2, roadScaledHeight);
-    road2.setPosition((width-roadScaledWidth)/2, 0);
-    road3.setPosition((width-roadScaledWidth)/2, - 1*roadScaledHeight);
+    road1.setPosition((WIDTH-roadScaledWidth)/2, roadScaledHeight);
+    road2.setPosition((WIDTH-roadScaledWidth)/2, 0);
+    road3.setPosition((WIDTH-roadScaledWidth)/2, - 1*roadScaledHeight);
     
 
     roadLanes[0] = road1.getPosition().x;
@@ -112,14 +112,14 @@ void moveBackground(float scrollSpeed,float deltaTime){
     // width-roadTexture.getSize().x explanation:
     // for (width of the screen - width of the road) give us an offset
     // when centering, if we directly used width/2 the road position the road will look 'off' because the road's position is set from left side, (width- getsize.x)/2 gives us a better result, however (width- getsize.x) is too long and complex to follow
-    if (road1.getPosition().y >= height)
-        road1.setPosition(static_cast<float>((width-roadScaledWidth)/2),static_cast<float>(road3.getPosition().y - roadScaledHeight));
+    if (road1.getPosition().y >= HEIGHT)
+        road1.setPosition(static_cast<float>((WIDTH-roadScaledWidth)/2),static_cast<float>(road3.getPosition().y - roadScaledHeight));
     
-    if (road2.getPosition().y >= height)
-        road2.setPosition(static_cast<float>((width-roadScaledWidth)/2),static_cast<float>(road1.getPosition().y - roadScaledHeight));
+    if (road2.getPosition().y >= HEIGHT)
+        road2.setPosition(static_cast<float>((WIDTH-roadScaledWidth)/2),static_cast<float>(road1.getPosition().y - roadScaledHeight));
     
-    if (road3.getPosition().y >= height)
-        road3.setPosition(static_cast<float>((width-roadScaledWidth)/2),static_cast<float>(road2.getPosition().y - roadScaledHeight));
+    if (road3.getPosition().y >= HEIGHT)
+        road3.setPosition(static_cast<float>((WIDTH-roadScaledWidth)/2),static_cast<float>(road2.getPosition().y - roadScaledHeight));
 }
 
 // int roadLanes[2] = {404,540}; // road lanes for NPC cars
@@ -151,7 +151,7 @@ int load_n_NPC(int n,int i){
 void moveNPC(int index,float scrollSpeed, float deltaTime){
     
     NPCCars[index].move(0, scrollSpeed * deltaTime);
-    if (NPCCars[index].getPosition().y > height + 30){
+    if (NPCCars[index].getPosition().y > HEIGHT + 30){
         conf::NPCcarPos[index].x =  static_cast<int>(func::getRandomNumber(gameClock, roadLanes[0], roadLanes[1]));  // update the NPC car position
         conf::NPCcarPos[index].y -= static_cast<int>(func::getRandomNumber(gameClock, 0, 500));                      // update the NPC car position
         load_n_NPC(func::getRandomNumber(gameClock, 0, 47),index); // i the ith npc car being loaded
@@ -175,23 +175,23 @@ void moveNPC(int index,float scrollSpeed, float deltaTime){
 //  note: since the function can only return one value at a time, it is not possible to check for multiple boundaries at once hence we function can determine whether the player is at a corner
 //  or not. for this the corner cases have to be explicitly defined
 static int playerBounds() {
-    if (playerCar.getPosition().x < 0 || playerCar.getPosition().x + 10 > width || playerCar.getPosition().y < 0 || playerCar.getPosition().y + 10 > height) {
+    if (playerCar.getPosition().x < 0 || playerCar.getPosition().x + 10 > WIDTH || playerCar.getPosition().y < 0 || playerCar.getPosition().y + 10 > HEIGHT) {
         // Nested clauses for specific boundaries and corners
         if (playerCar.getPosition().x < 0 && playerCar.getPosition().y < 0) {
             return 1; // Top-left corner
-        } else if (playerCar.getPosition().y < 0 && playerCar.getPosition().x + 10 > width) {
+        } else if (playerCar.getPosition().y < 0 && playerCar.getPosition().x + 10 > WIDTH) {
             return 3; // Top-right corner
-        } else if (playerCar.getPosition().x < 0 && playerCar.getPosition().y + 10 > height) {
+        } else if (playerCar.getPosition().x < 0 && playerCar.getPosition().y + 10 > HEIGHT) {
             return 0; //7; // Bottom-left corner
-        } else if (playerCar.getPosition().x + 10 > width && playerCar.getPosition().y + 10 > height) {
+        } else if (playerCar.getPosition().x + 10 > WIDTH && playerCar.getPosition().y + 10 > HEIGHT) {
             return 0; //9; // Bottom-right corner
         } else if (playerCar.getPosition().y < 0) {
             return 2; // Top boundary
         } else if (playerCar.getPosition().x < 0) {
             return 4; // Left boundary
-        } else if (playerCar.getPosition().x + 10 > width) {
+        } else if (playerCar.getPosition().x + 10 > WIDTH) {
             return 6; // Right boundary
-        } else if (playerCar.getPosition().y + 10 > height) {
+        } else if (playerCar.getPosition().y + 10 > HEIGHT) {
             return 0; //8; // Bottom boundary
         }
         return 0;
@@ -316,7 +316,7 @@ void debugInfo(sf::Clock clock){
             cout << "=";
         }
         cout<<endl;
-        cout << "Screen res:           " << width << ", " << height << "\n";
+        cout << "Screen res:           " << WIDTH << ", " << HEIGHT << "\n";
         cout << "FPS:                  " << 1.f / clock.restart().asSeconds() << "\n";
         cout << "Player Car Position:  " << playerCar.getPosition().x << ", " << playerCar.getPosition().y << "\n";
         cout << "NPC1 Car Position:    " << NPCCars[0].getPosition().x << ", " << NPCCars[0].getPosition().y << "\n";
@@ -372,7 +372,7 @@ void gameStep(float dT){
         movePlayer(dT, conf::swerveVert,conf::swerveHorz); // this is the speed with which the player car ACROSS moves
 }
 
-void renderElements(){
+void renderGameElements(){
     // order of render determines the position of the elements
     window.clear(conf::darkGreen);
     window.draw(road1);
@@ -384,6 +384,25 @@ void renderElements(){
         window.draw(NPCCars[i]);
     }
     window.display();
+}
+
+int playGame(float deltaTime, int i) {
+    time_t game_start = time(NULL);
+    time_t game_end = time(NULL);
+    debugInfo(gameClock);
+    // if(i==0){
+    //     i = 100;
+    // }
+    // i--;
+    if (playerCar.getPosition().y < HEIGHT) {
+        //? runs the simulation, all game events, like car/npc/road - movement/behaviour,
+        gameStep(deltaTime);
+        //? final rendering of all GAME elements to screen
+        renderGameElements();
+    } else {
+        game_end = time(NULL);
+    }
+    return game_end - game_start; // return the time survived
 }
 
 void initWindowEvents(){
@@ -401,8 +420,6 @@ void initWindowEvents(){
 
 int main() {
     hideCursor();
-    // std::srand(static_cast<unsigned int>(std::time(nullptr))); // creating rand seed
-    // float roadScrollSpeed = conf::roadScrollSpeed;
     if (
         // order of loading determines the order of rendering
         loadStructures() == -1
@@ -417,26 +434,22 @@ int main() {
 
     int i = 100;
 
+    int score = 0;
     // Main game loop
-    while (window.isOpen()) {
-        // show info every thousandth frame
-        if(i==0)
-        {
-            debugInfo(gameClock);
-            i = 100;
-        }
-        i--;
-        
+    while (window.isOpen() && score == 0 ) {
         initWindowEvents();
 
         
+        
         float deltaTime = gameClock.restart().asSeconds();
+        score = playGame(deltaTime,i);
+        
+        // show info every thousandth frame
+        cout<<"score: "<<score<<"\n";
+        cursorUp(1);
 
-        gameStep(deltaTime);
-
-        //? final rendering of all elements to screen
-        renderElements();
     }
+    cout<<"score: "<<score<<"\n";
 
     return 0;
 }
