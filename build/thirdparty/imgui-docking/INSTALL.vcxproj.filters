@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\build\CMakeFiles\89a7b304e7621e108a908dc962e7d2b9\INSTALL_force.rule">
+    <CustomBuild Include="D:\rafay\racing-game-Cpp-SFML\build\CMakeFiles\8072ebaf9df19cc5b587f54bd01a30dc\INSTALL_force.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{D34AC714-8956-3209-9F95-64A4BCC86D4A}</UniqueIdentifier>
+      <UniqueIdentifier>{09EE593B-033F-3C90-9F26-4CBF822E38E0}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

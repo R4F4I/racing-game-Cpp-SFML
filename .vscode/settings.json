@@ -65,9 +65,9 @@
     },
     "C_Cpp.default.compilerPath": "C:/msys64/ucrt64/bin/g++.exe",
     
-    "cmake.generator": "Visual Studio 17 2022", // for MSBuild
-    "cmake.buildDirectory": "${workspaceFolder}/build",
-    "cmake.configureOnOpen": true,
-    "cmake.sourceDirectory": "${workspaceFolder}"
+    // "cmake.generator": "Visual Studio 17 2022", // for MSBuild
+    // "cmake.buildDirectory": "${workspaceFolder}/build",
+    // "cmake.configureOnOpen": true,
+    // "cmake.sourceDirectory": "${workspaceFolder}"
     
 }

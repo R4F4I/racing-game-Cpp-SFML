@@ -1,1 +1,3 @@
-﻿  glad.vcxproj -> D:\rafay\CPP\projects\racing-game-Cpp-SFML\build\thirdparty\glad\Debug\glad.lib
+﻿  Building Custom Rule D:/rafay/racing-game-Cpp-SFML/thirdparty/glad/CMakeLists.txt
+  glad.c
+  glad.vcxproj -> D:\rafay\racing-game-Cpp-SFML\build\thirdparty\glad\Debug\glad.lib

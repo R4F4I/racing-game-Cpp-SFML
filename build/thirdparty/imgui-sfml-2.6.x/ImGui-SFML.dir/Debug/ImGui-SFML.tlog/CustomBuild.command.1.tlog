@@ -1,6 +1,6 @@
-^D:\RAFAY\CPP\PROJECTS\RACING-GAME-CPP-SFML\THIRDPARTY\IMGUI-SFML-2.6.X\CMAKELISTS.TXT
+^D:\RAFAY\RACING-GAME-CPP-SFML\THIRDPARTY\IMGUI-SFML-2.6.X\CMAKELISTS.TXT
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SD:/rafay/CPP/projects/racing-game-Cpp-SFML -BD:/rafay/CPP/projects/racing-game-Cpp-SFML/build --check-stamp-file D:/rafay/CPP/projects/racing-game-Cpp-SFML/build/thirdparty/imgui-sfml-2.6.x/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/rafay/racing-game-Cpp-SFML -BD:/rafay/racing-game-Cpp-SFML/build --check-stamp-file D:/rafay/racing-game-Cpp-SFML/build/thirdparty/imgui-sfml-2.6.x/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

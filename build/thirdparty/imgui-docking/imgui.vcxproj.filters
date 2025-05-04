@@ -1,28 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\imgui-docking\imgui\imgui.cpp">
+    <ClCompile Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\imgui-docking\imgui\imgui.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\imgui-docking\imgui\imgui_demo.cpp">
+    <ClCompile Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\imgui-docking\imgui\imgui_demo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\imgui-docking\imgui\imgui_draw.cpp">
+    <ClCompile Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\imgui-docking\imgui\imgui_draw.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\imgui-docking\imgui\imgui_tables.cpp">
+    <ClCompile Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\imgui-docking\imgui\imgui_tables.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\imgui-docking\imgui\imgui_widgets.cpp">
+    <ClCompile Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\imgui-docking\imgui\imgui_widgets.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\imgui-docking\CMakeLists.txt" />
+    <CustomBuild Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\imgui-docking\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{A9E4C0F1-90D9-3B6D-AE64-D5691D943F35}</UniqueIdentifier>
+      <UniqueIdentifier>{051C5CE3-7A71-3F47-9103-12B4BA72408F}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

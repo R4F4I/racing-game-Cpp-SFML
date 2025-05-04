@@ -1,8 +1,8 @@
-# Install script for directory: D:/rafay/CPP/projects/racing-game-Cpp-SFML/thirdparty/glad
+# Install script for directory: D:/rafay/racing-game-Cpp-SFML/thirdparty/glad
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/mygame")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/racing-game-Cpp-SFML")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -35,6 +35,6 @@ endif()
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "D:/rafay/CPP/projects/racing-game-Cpp-SFML/build/thirdparty/glad/install_local_manifest.txt"
+  file(WRITE "D:/rafay/racing-game-Cpp-SFML/build/thirdparty/glad/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

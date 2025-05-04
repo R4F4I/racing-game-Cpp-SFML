@@ -1,6 +1,7 @@
 ﻿  Copying resources to build directory
+  Building Custom Rule D:/rafay/racing-game-Cpp-SFML/CMakeLists.txt
   main.cpp
   Generating code
   Not all modules are compiled with -Gy (function comdat), build without incremental LTCG.
   Finished generating code
-  racing-game-Cpp-SFML.vcxproj -> D:\rafay\CPP\projects\racing-game-Cpp-SFML\build\Debug\racing-game-Cpp-SFML.exe
+  racing-game-Cpp-SFML.vcxproj -> D:\rafay\racing-game-Cpp-SFML\build\Debug\racing-game-Cpp-SFML.exe

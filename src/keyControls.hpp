@@ -7,6 +7,11 @@ namespace key{
     bool pressedRight();
     bool pressedUp();
     bool pressedDown();
+   
+    bool pressedW();
+    bool pressedA();
+    bool pressedS();
+    bool pressedD();
 }
 
 

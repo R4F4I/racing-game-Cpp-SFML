@@ -1,8 +1,8 @@
-# Install script for directory: D:/rafay/CPP/projects/racing-game-Cpp-SFML
+# Install script for directory: D:/rafay/racing-game-Cpp-SFML
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/mygame")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/racing-game-Cpp-SFML")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,28 +34,28 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("D:/rafay/CPP/projects/racing-game-Cpp-SFML/build/thirdparty/SFML-2.6.1/cmake_install.cmake")
+  include("D:/rafay/racing-game-Cpp-SFML/build/thirdparty/SFML-2.6.1/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("D:/rafay/CPP/projects/racing-game-Cpp-SFML/build/thirdparty/imgui-docking/cmake_install.cmake")
+  include("D:/rafay/racing-game-Cpp-SFML/build/thirdparty/imgui-docking/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("D:/rafay/CPP/projects/racing-game-Cpp-SFML/build/thirdparty/imgui-sfml-2.6.x/cmake_install.cmake")
+  include("D:/rafay/racing-game-Cpp-SFML/build/thirdparty/imgui-sfml-2.6.x/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("D:/rafay/CPP/projects/racing-game-Cpp-SFML/build/thirdparty/glad/cmake_install.cmake")
+  include("D:/rafay/racing-game-Cpp-SFML/build/thirdparty/glad/cmake_install.cmake")
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "D:/rafay/CPP/projects/racing-game-Cpp-SFML/build/install_local_manifest.txt"
+  file(WRITE "D:/rafay/racing-game-Cpp-SFML/build/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
 if(CMAKE_INSTALL_COMPONENT)
@@ -71,6 +71,6 @@ else()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "D:/rafay/CPP/projects/racing-game-Cpp-SFML/build/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "D:/rafay/racing-game-Cpp-SFML/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

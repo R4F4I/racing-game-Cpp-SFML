@@ -1,6 +1,6 @@
 # CMake generation dependency list for this directory.
 C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeParseArguments.cmake
-D:/rafay/CPP/projects/racing-game-Cpp-SFML/build/CMakeFiles/cmake.verify_globs
-D:/rafay/CPP/projects/racing-game-Cpp-SFML/thirdparty/SFML-2.6.1/cmake/CompilerWarnings.cmake
-D:/rafay/CPP/projects/racing-game-Cpp-SFML/thirdparty/SFML-2.6.1/cmake/Macros.cmake
-D:/rafay/CPP/projects/racing-game-Cpp-SFML/thirdparty/SFML-2.6.1/src/SFML/CMakeLists.txt
+D:/rafay/racing-game-Cpp-SFML/build/CMakeFiles/cmake.verify_globs
+D:/rafay/racing-game-Cpp-SFML/thirdparty/SFML-2.6.1/cmake/CompilerWarnings.cmake
+D:/rafay/racing-game-Cpp-SFML/thirdparty/SFML-2.6.1/cmake/Macros.cmake
+D:/rafay/racing-game-Cpp-SFML/thirdparty/SFML-2.6.1/src/SFML/CMakeLists.txt

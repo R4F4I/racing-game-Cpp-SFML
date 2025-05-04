@@ -22,7 +22,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{D6764C24-82D0-3DA4-B7E0-E73702FE4FD7}</ProjectGuid>
+    <ProjectGuid>{7D37E51E-BB02-30C7-A35B-DADAEB0C6195}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
@@ -59,26 +59,26 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\rafay\CPP\projects\racing-game-Cpp-SFML\build\thirdparty\SFML-2.6.1\lib\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\rafay\racing-game-Cpp-SFML\build\thirdparty\SFML-2.6.1\lib\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sfml-main.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sfml-main-d</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\rafay\CPP\projects\racing-game-Cpp-SFML\build\thirdparty\SFML-2.6.1\lib\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\rafay\racing-game-Cpp-SFML\build\thirdparty\SFML-2.6.1\lib\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sfml-main.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sfml-main</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\rafay\CPP\projects\racing-game-Cpp-SFML\build\thirdparty\SFML-2.6.1\lib\MinSizeRel\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\rafay\racing-game-Cpp-SFML\build\thirdparty\SFML-2.6.1\lib\MinSizeRel\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">sfml-main.dir\MinSizeRel\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">sfml-main</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\rafay\CPP\projects\racing-game-Cpp-SFML\build\thirdparty\SFML-2.6.1\lib\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\rafay\racing-game-Cpp-SFML\build\thirdparty\SFML-2.6.1\lib\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">sfml-main.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">sfml-main</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include;D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include;D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -90,20 +90,19 @@
       <Optimization>Disabled</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <SupportJustMyCode></SupportJustMyCode>
       <UseFullPaths>false</UseFullPaths>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;SFML_STATIC;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
-      <ProgramDataBaseFileName>D:\rafay\CPP\projects\racing-game-Cpp-SFML\build\thirdparty\SFML-2.6.1\lib\Debug\sfml-main-s.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>D:\rafay\racing-game-Cpp-SFML\build\thirdparty\SFML-2.6.1\lib\Debug\sfml-main-s.pdb</ProgramDataBaseFileName>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;SFML_STATIC;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include;D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include;D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include;D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include;D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -116,7 +115,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include;D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include;D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
@@ -127,22 +126,21 @@
       <Optimization>MaxSpeed</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <SupportJustMyCode></SupportJustMyCode>
       <UseFullPaths>false</UseFullPaths>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;SFML_STATIC;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
-      <ProgramDataBaseFileName>D:\rafay\CPP\projects\racing-game-Cpp-SFML\build\thirdparty\SFML-2.6.1\lib\Release\sfml-main-s.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>D:\rafay\racing-game-Cpp-SFML\build\thirdparty\SFML-2.6.1\lib\Release\sfml-main-s.pdb</ProgramDataBaseFileName>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;SFML_STATIC;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include;D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include;D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include;D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include;D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -155,7 +153,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include;D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include;D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
@@ -166,22 +164,21 @@
       <Optimization>MinSpace</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <SupportJustMyCode></SupportJustMyCode>
       <UseFullPaths>false</UseFullPaths>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;SFML_STATIC;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
-      <ProgramDataBaseFileName>D:\rafay\CPP\projects\racing-game-Cpp-SFML\build\thirdparty\SFML-2.6.1\lib\MinSizeRel\sfml-main-s.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>D:\rafay\racing-game-Cpp-SFML\build\thirdparty\SFML-2.6.1\lib\MinSizeRel\sfml-main-s.pdb</ProgramDataBaseFileName>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;SFML_STATIC;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include;D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include;D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include;D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include;D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -194,7 +191,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include;D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include;D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -206,20 +203,19 @@
       <Optimization>MaxSpeed</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <SupportJustMyCode></SupportJustMyCode>
       <UseFullPaths>false</UseFullPaths>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;SFML_STATIC;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
-      <ProgramDataBaseFileName>D:\rafay\CPP\projects\racing-game-Cpp-SFML\build\thirdparty\SFML-2.6.1\lib\RelWithDebInfo\sfml-main-s.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>D:\rafay\racing-game-Cpp-SFML\build\thirdparty\SFML-2.6.1\lib\RelWithDebInfo\sfml-main-s.pdb</ProgramDataBaseFileName>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;SFML_STATIC;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include;D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include;D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include;D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include;D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -231,11 +227,11 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Main\CMakeLists.txt">
+    <CustomBuild Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Main\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/rafay/CPP/projects/racing-game-Cpp-SFML/thirdparty/SFML-2.6.1/src/SFML/Main/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/rafay/racing-game-Cpp-SFML/thirdparty/SFML-2.6.1/src/SFML/Main/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SD:/rafay/CPP/projects/racing-game-Cpp-SFML -BD:/rafay/CPP/projects/racing-game-Cpp-SFML/build --check-stamp-file D:/rafay/CPP/projects/racing-game-Cpp-SFML/build/thirdparty/SFML-2.6.1/src/SFML/Main/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/rafay/racing-game-Cpp-SFML -BD:/rafay/racing-game-Cpp-SFML/build --check-stamp-file D:/rafay/racing-game-Cpp-SFML/build/thirdparty/SFML-2.6.1/src/SFML/Main/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -243,12 +239,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\rafay\CPP\projects\racing-game-Cpp-SFML\build\CMakeFiles\cmake.verify_globs;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\rafay\CPP\projects\racing-game-Cpp-SFML\build\thirdparty\SFML-2.6.1\src\SFML\Main\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\rafay\racing-game-Cpp-SFML\build\CMakeFiles\cmake.verify_globs;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\rafay\racing-game-Cpp-SFML\build\thirdparty\SFML-2.6.1\src\SFML\Main\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/rafay/CPP/projects/racing-game-Cpp-SFML/thirdparty/SFML-2.6.1/src/SFML/Main/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/rafay/racing-game-Cpp-SFML/thirdparty/SFML-2.6.1/src/SFML/Main/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SD:/rafay/CPP/projects/racing-game-Cpp-SFML -BD:/rafay/CPP/projects/racing-game-Cpp-SFML/build --check-stamp-file D:/rafay/CPP/projects/racing-game-Cpp-SFML/build/thirdparty/SFML-2.6.1/src/SFML/Main/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/rafay/racing-game-Cpp-SFML -BD:/rafay/racing-game-Cpp-SFML/build --check-stamp-file D:/rafay/racing-game-Cpp-SFML/build/thirdparty/SFML-2.6.1/src/SFML/Main/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -256,12 +252,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\rafay\CPP\projects\racing-game-Cpp-SFML\build\CMakeFiles\cmake.verify_globs;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\rafay\CPP\projects\racing-game-Cpp-SFML\build\thirdparty\SFML-2.6.1\src\SFML\Main\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\rafay\racing-game-Cpp-SFML\build\CMakeFiles\cmake.verify_globs;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\rafay\racing-game-Cpp-SFML\build\thirdparty\SFML-2.6.1\src\SFML\Main\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/rafay/CPP/projects/racing-game-Cpp-SFML/thirdparty/SFML-2.6.1/src/SFML/Main/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/rafay/racing-game-Cpp-SFML/thirdparty/SFML-2.6.1/src/SFML/Main/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SD:/rafay/CPP/projects/racing-game-Cpp-SFML -BD:/rafay/CPP/projects/racing-game-Cpp-SFML/build --check-stamp-file D:/rafay/CPP/projects/racing-game-Cpp-SFML/build/thirdparty/SFML-2.6.1/src/SFML/Main/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/rafay/racing-game-Cpp-SFML -BD:/rafay/racing-game-Cpp-SFML/build --check-stamp-file D:/rafay/racing-game-Cpp-SFML/build/thirdparty/SFML-2.6.1/src/SFML/Main/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -269,12 +265,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\rafay\CPP\projects\racing-game-Cpp-SFML\build\CMakeFiles\cmake.verify_globs;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\rafay\CPP\projects\racing-game-Cpp-SFML\build\thirdparty\SFML-2.6.1\src\SFML\Main\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\rafay\racing-game-Cpp-SFML\build\CMakeFiles\cmake.verify_globs;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\rafay\racing-game-Cpp-SFML\build\thirdparty\SFML-2.6.1\src\SFML\Main\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/rafay/CPP/projects/racing-game-Cpp-SFML/thirdparty/SFML-2.6.1/src/SFML/Main/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/rafay/racing-game-Cpp-SFML/thirdparty/SFML-2.6.1/src/SFML/Main/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SD:/rafay/CPP/projects/racing-game-Cpp-SFML -BD:/rafay/CPP/projects/racing-game-Cpp-SFML/build --check-stamp-file D:/rafay/CPP/projects/racing-game-Cpp-SFML/build/thirdparty/SFML-2.6.1/src/SFML/Main/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/rafay/racing-game-Cpp-SFML -BD:/rafay/racing-game-Cpp-SFML/build --check-stamp-file D:/rafay/racing-game-Cpp-SFML/build/thirdparty/SFML-2.6.1/src/SFML/Main/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -282,13 +278,13 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\rafay\CPP\projects\racing-game-Cpp-SFML\build\CMakeFiles\cmake.verify_globs;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\rafay\CPP\projects\racing-game-Cpp-SFML\build\thirdparty\SFML-2.6.1\src\SFML\Main\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\rafay\racing-game-Cpp-SFML\build\CMakeFiles\cmake.verify_globs;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\rafay\racing-game-Cpp-SFML\build\thirdparty\SFML-2.6.1\src\SFML\Main\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Main\MainWin32.cpp">
+    <ClCompile Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Main\MainWin32.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -309,8 +305,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\build\ZERO_CHECK.vcxproj">
-      <Project>{B25F3EE6-A5D9-30B7-A26F-F8DFA9C53E0A}</Project>
+    <ProjectReference Include="D:\rafay\racing-game-Cpp-SFML\build\ZERO_CHECK.vcxproj">
+      <Project>{9D2BC86E-29B8-3F05-AC5C-0DD9D92F7CB2}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>

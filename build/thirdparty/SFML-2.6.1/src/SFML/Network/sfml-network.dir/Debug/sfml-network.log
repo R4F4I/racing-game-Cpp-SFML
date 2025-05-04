@@ -1,1 +1,13 @@
-﻿  sfml-network.vcxproj -> D:\rafay\CPP\projects\racing-game-Cpp-SFML\build\thirdparty\SFML-2.6.1\lib\Debug\sfml-network-s-d.lib
+﻿  Building Custom Rule D:/rafay/racing-game-Cpp-SFML/thirdparty/SFML-2.6.1/src/SFML/Network/CMakeLists.txt
+  Ftp.cpp
+  Http.cpp
+  IpAddress.cpp
+  Packet.cpp
+  Socket.cpp
+  SocketSelector.cpp
+  TcpListener.cpp
+  TcpSocket.cpp
+  UdpSocket.cpp
+  SocketImpl.cpp
+  Generating Code...
+  sfml-network.vcxproj -> D:\rafay\racing-game-Cpp-SFML\build\thirdparty\SFML-2.6.1\lib\Debug\sfml-network-s-d.lib

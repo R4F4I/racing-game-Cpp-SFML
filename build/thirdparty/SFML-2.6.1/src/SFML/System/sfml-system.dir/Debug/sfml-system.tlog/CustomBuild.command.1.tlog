@@ -1,6 +1,6 @@
-^D:\RAFAY\CPP\PROJECTS\RACING-GAME-CPP-SFML\THIRDPARTY\SFML-2.6.1\SRC\SFML\SYSTEM\CMAKELISTS.TXT
+^D:\RAFAY\RACING-GAME-CPP-SFML\THIRDPARTY\SFML-2.6.1\SRC\SFML\SYSTEM\CMAKELISTS.TXT
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SD:/rafay/CPP/projects/racing-game-Cpp-SFML -BD:/rafay/CPP/projects/racing-game-Cpp-SFML/build --check-stamp-file D:/rafay/CPP/projects/racing-game-Cpp-SFML/build/thirdparty/SFML-2.6.1/src/SFML/System/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/rafay/racing-game-Cpp-SFML -BD:/rafay/racing-game-Cpp-SFML/build --check-stamp-file D:/rafay/racing-game-Cpp-SFML/build/thirdparty/SFML-2.6.1/src/SFML/System/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

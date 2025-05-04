@@ -1,1 +1,9 @@
-﻿  ImGui-SFML.vcxproj -> D:\rafay\CPP\projects\racing-game-Cpp-SFML\build\thirdparty\imgui-sfml-2.6.x\Debug\ImGui-SFML.lib
+﻿  Building Custom Rule D:/rafay/racing-game-Cpp-SFML/thirdparty/imgui-sfml-2.6.x/CMakeLists.txt
+  imgui-SFML.cpp
+  imgui.cpp
+  imgui_draw.cpp
+  imgui_tables.cpp
+  imgui_widgets.cpp
+  imgui_stdlib.cpp
+  imgui_demo.cpp
+  ImGui-SFML.vcxproj -> D:\rafay\racing-game-Cpp-SFML\build\thirdparty\imgui-sfml-2.6.x\Debug\ImGui-SFML.lib

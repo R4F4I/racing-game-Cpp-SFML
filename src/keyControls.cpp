@@ -17,5 +17,18 @@ namespace key{
     }
     bool pressedDown(){
         return sf::Keyboard::isKeyPressed(sf::Keyboard::Down);
+
+    }
+    bool pressedW(){
+        return sf::Keyboard::isKeyPressed(sf::Keyboard::W);
+    }
+    bool pressedA(){
+        return sf::Keyboard::isKeyPressed(sf::Keyboard::A);
+    }
+    bool pressedS(){
+        return sf::Keyboard::isKeyPressed(sf::Keyboard::S);
+    }
+    bool pressedD(){
+        return sf::Keyboard::isKeyPressed(sf::Keyboard::D);
     }
 }

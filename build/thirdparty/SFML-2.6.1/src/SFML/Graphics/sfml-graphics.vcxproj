@@ -22,7 +22,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{CAE21977-B2E7-30CF-97D4-415F58E11F6E}</ProjectGuid>
+    <ProjectGuid>{843CCF05-34C6-330A-9C90-AD95EC73C325}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
@@ -59,27 +59,27 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\rafay\CPP\projects\racing-game-Cpp-SFML\build\thirdparty\SFML-2.6.1\lib\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\rafay\racing-game-Cpp-SFML\build\thirdparty\SFML-2.6.1\lib\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sfml-graphics.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sfml-graphics-s-d</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\rafay\CPP\projects\racing-game-Cpp-SFML\build\thirdparty\SFML-2.6.1\lib\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\rafay\racing-game-Cpp-SFML\build\thirdparty\SFML-2.6.1\lib\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sfml-graphics.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sfml-graphics-s</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\rafay\CPP\projects\racing-game-Cpp-SFML\build\thirdparty\SFML-2.6.1\lib\MinSizeRel\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\rafay\racing-game-Cpp-SFML\build\thirdparty\SFML-2.6.1\lib\MinSizeRel\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">sfml-graphics.dir\MinSizeRel\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">sfml-graphics-s</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\rafay\CPP\projects\racing-game-Cpp-SFML\build\thirdparty\SFML-2.6.1\lib\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\rafay\racing-game-Cpp-SFML\build\thirdparty\SFML-2.6.1\lib\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">sfml-graphics.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">sfml-graphics-s</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include;D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/rafay/CPP/projects/racing-game-Cpp-SFML/thirdparty/SFML-2.6.1/extlibs/headers/stb_image" /external:I "D:/rafay/CPP/projects/racing-game-Cpp-SFML/thirdparty/SFML-2.6.1/extlibs/headers/glad/include" /external:I "D:/rafay/CPP/projects/racing-game-Cpp-SFML/thirdparty/SFML-2.6.1/extlibs/headers/freetype2"</AdditionalOptions>
+      <AdditionalIncludeDirectories>D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include;D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/rafay/racing-game-Cpp-SFML/thirdparty/SFML-2.6.1/extlibs/headers/stb_image" /external:I "D:/rafay/racing-game-Cpp-SFML/thirdparty/SFML-2.6.1/extlibs/headers/glad/include" /external:I "D:/rafay/racing-game-Cpp-SFML/thirdparty/SFML-2.6.1/extlibs/headers/freetype2"</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -92,20 +92,19 @@
       <Optimization>Disabled</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <SupportJustMyCode></SupportJustMyCode>
       <UseFullPaths>false</UseFullPaths>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;SFML_STATIC;STBI_FAILURE_USERMSG;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
-      <ProgramDataBaseFileName>D:\rafay\CPP\projects\racing-game-Cpp-SFML\build\thirdparty\SFML-2.6.1\lib\Debug\sfml-graphics-s.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>D:\rafay\racing-game-Cpp-SFML\build\thirdparty\SFML-2.6.1\lib\Debug\sfml-graphics-s.pdb</ProgramDataBaseFileName>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;SFML_STATIC;STBI_FAILURE_USERMSG;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include;D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src;D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\extlibs\headers\stb_image;D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\extlibs\headers\glad\include;D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\extlibs\headers\freetype2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include;D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src;D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\extlibs\headers\stb_image;D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\extlibs\headers\glad\include;D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\extlibs\headers\freetype2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include;D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src;D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\extlibs\headers\stb_image;D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\extlibs\headers\glad\include;D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\extlibs\headers\freetype2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include;D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src;D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\extlibs\headers\stb_image;D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\extlibs\headers\glad\include;D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\extlibs\headers\freetype2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -118,8 +117,8 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include;D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/rafay/CPP/projects/racing-game-Cpp-SFML/thirdparty/SFML-2.6.1/extlibs/headers/stb_image" /external:I "D:/rafay/CPP/projects/racing-game-Cpp-SFML/thirdparty/SFML-2.6.1/extlibs/headers/glad/include" /external:I "D:/rafay/CPP/projects/racing-game-Cpp-SFML/thirdparty/SFML-2.6.1/extlibs/headers/freetype2"</AdditionalOptions>
+      <AdditionalIncludeDirectories>D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include;D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/rafay/racing-game-Cpp-SFML/thirdparty/SFML-2.6.1/extlibs/headers/stb_image" /external:I "D:/rafay/racing-game-Cpp-SFML/thirdparty/SFML-2.6.1/extlibs/headers/glad/include" /external:I "D:/rafay/racing-game-Cpp-SFML/thirdparty/SFML-2.6.1/extlibs/headers/freetype2"</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
@@ -131,22 +130,21 @@
       <Optimization>MaxSpeed</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <SupportJustMyCode></SupportJustMyCode>
       <UseFullPaths>false</UseFullPaths>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;SFML_STATIC;STBI_FAILURE_USERMSG;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
-      <ProgramDataBaseFileName>D:\rafay\CPP\projects\racing-game-Cpp-SFML\build\thirdparty\SFML-2.6.1\lib\Release\sfml-graphics-s.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>D:\rafay\racing-game-Cpp-SFML\build\thirdparty\SFML-2.6.1\lib\Release\sfml-graphics-s.pdb</ProgramDataBaseFileName>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;SFML_STATIC;STBI_FAILURE_USERMSG;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include;D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src;D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\extlibs\headers\stb_image;D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\extlibs\headers\glad\include;D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\extlibs\headers\freetype2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include;D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src;D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\extlibs\headers\stb_image;D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\extlibs\headers\glad\include;D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\extlibs\headers\freetype2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include;D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src;D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\extlibs\headers\stb_image;D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\extlibs\headers\glad\include;D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\extlibs\headers\freetype2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include;D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src;D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\extlibs\headers\stb_image;D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\extlibs\headers\glad\include;D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\extlibs\headers\freetype2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -159,8 +157,8 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include;D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/rafay/CPP/projects/racing-game-Cpp-SFML/thirdparty/SFML-2.6.1/extlibs/headers/stb_image" /external:I "D:/rafay/CPP/projects/racing-game-Cpp-SFML/thirdparty/SFML-2.6.1/extlibs/headers/glad/include" /external:I "D:/rafay/CPP/projects/racing-game-Cpp-SFML/thirdparty/SFML-2.6.1/extlibs/headers/freetype2"</AdditionalOptions>
+      <AdditionalIncludeDirectories>D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include;D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/rafay/racing-game-Cpp-SFML/thirdparty/SFML-2.6.1/extlibs/headers/stb_image" /external:I "D:/rafay/racing-game-Cpp-SFML/thirdparty/SFML-2.6.1/extlibs/headers/glad/include" /external:I "D:/rafay/racing-game-Cpp-SFML/thirdparty/SFML-2.6.1/extlibs/headers/freetype2"</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
@@ -172,22 +170,21 @@
       <Optimization>MinSpace</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <SupportJustMyCode></SupportJustMyCode>
       <UseFullPaths>false</UseFullPaths>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;SFML_STATIC;STBI_FAILURE_USERMSG;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
-      <ProgramDataBaseFileName>D:\rafay\CPP\projects\racing-game-Cpp-SFML\build\thirdparty\SFML-2.6.1\lib\MinSizeRel\sfml-graphics-s.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>D:\rafay\racing-game-Cpp-SFML\build\thirdparty\SFML-2.6.1\lib\MinSizeRel\sfml-graphics-s.pdb</ProgramDataBaseFileName>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;SFML_STATIC;STBI_FAILURE_USERMSG;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include;D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src;D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\extlibs\headers\stb_image;D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\extlibs\headers\glad\include;D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\extlibs\headers\freetype2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include;D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src;D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\extlibs\headers\stb_image;D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\extlibs\headers\glad\include;D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\extlibs\headers\freetype2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include;D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src;D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\extlibs\headers\stb_image;D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\extlibs\headers\glad\include;D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\extlibs\headers\freetype2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include;D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src;D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\extlibs\headers\stb_image;D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\extlibs\headers\glad\include;D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\extlibs\headers\freetype2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -200,8 +197,8 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include;D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/rafay/CPP/projects/racing-game-Cpp-SFML/thirdparty/SFML-2.6.1/extlibs/headers/stb_image" /external:I "D:/rafay/CPP/projects/racing-game-Cpp-SFML/thirdparty/SFML-2.6.1/extlibs/headers/glad/include" /external:I "D:/rafay/CPP/projects/racing-game-Cpp-SFML/thirdparty/SFML-2.6.1/extlibs/headers/freetype2"</AdditionalOptions>
+      <AdditionalIncludeDirectories>D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include;D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/rafay/racing-game-Cpp-SFML/thirdparty/SFML-2.6.1/extlibs/headers/stb_image" /external:I "D:/rafay/racing-game-Cpp-SFML/thirdparty/SFML-2.6.1/extlibs/headers/glad/include" /external:I "D:/rafay/racing-game-Cpp-SFML/thirdparty/SFML-2.6.1/extlibs/headers/freetype2"</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -214,20 +211,19 @@
       <Optimization>MaxSpeed</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <SupportJustMyCode></SupportJustMyCode>
       <UseFullPaths>false</UseFullPaths>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;SFML_STATIC;STBI_FAILURE_USERMSG;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
-      <ProgramDataBaseFileName>D:\rafay\CPP\projects\racing-game-Cpp-SFML\build\thirdparty\SFML-2.6.1\lib\RelWithDebInfo\sfml-graphics-s.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>D:\rafay\racing-game-Cpp-SFML\build\thirdparty\SFML-2.6.1\lib\RelWithDebInfo\sfml-graphics-s.pdb</ProgramDataBaseFileName>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;SFML_STATIC;STBI_FAILURE_USERMSG;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include;D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src;D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\extlibs\headers\stb_image;D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\extlibs\headers\glad\include;D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\extlibs\headers\freetype2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include;D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src;D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\extlibs\headers\stb_image;D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\extlibs\headers\glad\include;D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\extlibs\headers\freetype2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include;D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src;D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\extlibs\headers\stb_image;D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\extlibs\headers\glad\include;D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\extlibs\headers\freetype2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include;D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src;D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\extlibs\headers\stb_image;D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\extlibs\headers\glad\include;D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\extlibs\headers\freetype2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -239,11 +235,11 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\CMakeLists.txt">
+    <CustomBuild Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/rafay/CPP/projects/racing-game-Cpp-SFML/thirdparty/SFML-2.6.1/src/SFML/Graphics/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/rafay/racing-game-Cpp-SFML/thirdparty/SFML-2.6.1/src/SFML/Graphics/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SD:/rafay/CPP/projects/racing-game-Cpp-SFML -BD:/rafay/CPP/projects/racing-game-Cpp-SFML/build --check-stamp-file D:/rafay/CPP/projects/racing-game-Cpp-SFML/build/thirdparty/SFML-2.6.1/src/SFML/Graphics/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/rafay/racing-game-Cpp-SFML -BD:/rafay/racing-game-Cpp-SFML/build --check-stamp-file D:/rafay/racing-game-Cpp-SFML/build/thirdparty/SFML-2.6.1/src/SFML/Graphics/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -251,12 +247,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\rafay\CPP\projects\racing-game-Cpp-SFML\build\CMakeFiles\cmake.verify_globs;D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\cmake\Modules\FindFreetype.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\rafay\CPP\projects\racing-game-Cpp-SFML\build\thirdparty\SFML-2.6.1\src\SFML\Graphics\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\rafay\racing-game-Cpp-SFML\build\CMakeFiles\cmake.verify_globs;D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\cmake\Modules\FindFreetype.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\rafay\racing-game-Cpp-SFML\build\thirdparty\SFML-2.6.1\src\SFML\Graphics\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/rafay/CPP/projects/racing-game-Cpp-SFML/thirdparty/SFML-2.6.1/src/SFML/Graphics/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/rafay/racing-game-Cpp-SFML/thirdparty/SFML-2.6.1/src/SFML/Graphics/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SD:/rafay/CPP/projects/racing-game-Cpp-SFML -BD:/rafay/CPP/projects/racing-game-Cpp-SFML/build --check-stamp-file D:/rafay/CPP/projects/racing-game-Cpp-SFML/build/thirdparty/SFML-2.6.1/src/SFML/Graphics/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/rafay/racing-game-Cpp-SFML -BD:/rafay/racing-game-Cpp-SFML/build --check-stamp-file D:/rafay/racing-game-Cpp-SFML/build/thirdparty/SFML-2.6.1/src/SFML/Graphics/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -264,12 +260,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\rafay\CPP\projects\racing-game-Cpp-SFML\build\CMakeFiles\cmake.verify_globs;D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\cmake\Modules\FindFreetype.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\rafay\CPP\projects\racing-game-Cpp-SFML\build\thirdparty\SFML-2.6.1\src\SFML\Graphics\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\rafay\racing-game-Cpp-SFML\build\CMakeFiles\cmake.verify_globs;D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\cmake\Modules\FindFreetype.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\rafay\racing-game-Cpp-SFML\build\thirdparty\SFML-2.6.1\src\SFML\Graphics\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/rafay/CPP/projects/racing-game-Cpp-SFML/thirdparty/SFML-2.6.1/src/SFML/Graphics/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/rafay/racing-game-Cpp-SFML/thirdparty/SFML-2.6.1/src/SFML/Graphics/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SD:/rafay/CPP/projects/racing-game-Cpp-SFML -BD:/rafay/CPP/projects/racing-game-Cpp-SFML/build --check-stamp-file D:/rafay/CPP/projects/racing-game-Cpp-SFML/build/thirdparty/SFML-2.6.1/src/SFML/Graphics/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/rafay/racing-game-Cpp-SFML -BD:/rafay/racing-game-Cpp-SFML/build --check-stamp-file D:/rafay/racing-game-Cpp-SFML/build/thirdparty/SFML-2.6.1/src/SFML/Graphics/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -277,12 +273,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\rafay\CPP\projects\racing-game-Cpp-SFML\build\CMakeFiles\cmake.verify_globs;D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\cmake\Modules\FindFreetype.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\rafay\CPP\projects\racing-game-Cpp-SFML\build\thirdparty\SFML-2.6.1\src\SFML\Graphics\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\rafay\racing-game-Cpp-SFML\build\CMakeFiles\cmake.verify_globs;D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\cmake\Modules\FindFreetype.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\rafay\racing-game-Cpp-SFML\build\thirdparty\SFML-2.6.1\src\SFML\Graphics\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/rafay/CPP/projects/racing-game-Cpp-SFML/thirdparty/SFML-2.6.1/src/SFML/Graphics/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/rafay/racing-game-Cpp-SFML/thirdparty/SFML-2.6.1/src/SFML/Graphics/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SD:/rafay/CPP/projects/racing-game-Cpp-SFML -BD:/rafay/CPP/projects/racing-game-Cpp-SFML/build --check-stamp-file D:/rafay/CPP/projects/racing-game-Cpp-SFML/build/thirdparty/SFML-2.6.1/src/SFML/Graphics/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/rafay/racing-game-Cpp-SFML -BD:/rafay/racing-game-Cpp-SFML/build --check-stamp-file D:/rafay/racing-game-Cpp-SFML/build/thirdparty/SFML-2.6.1/src/SFML/Graphics/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -290,13 +286,13 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\rafay\CPP\projects\racing-game-Cpp-SFML\build\CMakeFiles\cmake.verify_globs;D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\cmake\Modules\FindFreetype.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\rafay\CPP\projects\racing-game-Cpp-SFML\build\thirdparty\SFML-2.6.1\src\SFML\Graphics\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\rafay\racing-game-Cpp-SFML\build\CMakeFiles\cmake.verify_globs;D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\cmake\Modules\FindFreetype.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\rafay\racing-game-Cpp-SFML\build\thirdparty\SFML-2.6.1\src\SFML\Graphics\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\BlendMode.cpp">
+    <ClCompile Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\BlendMode.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -314,8 +310,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4289</TreatSpecificWarningsAsErrors>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\BlendMode.hpp" />
-    <ClCompile Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\Color.cpp">
+    <ClInclude Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\BlendMode.hpp" />
+    <ClCompile Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\Color.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -333,9 +329,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4289</TreatSpecificWarningsAsErrors>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\Color.hpp" />
-    <ClInclude Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\Export.hpp" />
-    <ClCompile Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\Font.cpp">
+    <ClInclude Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\Color.hpp" />
+    <ClInclude Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\Export.hpp" />
+    <ClCompile Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\Font.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -353,8 +349,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4289</TreatSpecificWarningsAsErrors>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\Font.hpp" />
-    <ClCompile Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\Glsl.cpp">
+    <ClInclude Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\Font.hpp" />
+    <ClCompile Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\Glsl.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -372,10 +368,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4289</TreatSpecificWarningsAsErrors>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\Glsl.hpp" />
-    <ClInclude Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\Glsl.inl" />
-    <ClInclude Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\Glyph.hpp" />
-    <ClCompile Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\GLCheck.cpp">
+    <ClInclude Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\Glsl.hpp" />
+    <ClInclude Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\Glsl.inl" />
+    <ClInclude Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\Glyph.hpp" />
+    <ClCompile Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\GLCheck.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -393,9 +389,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4289</TreatSpecificWarningsAsErrors>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\GLCheck.hpp" />
-    <ClInclude Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\GLExtensions.hpp" />
-    <ClCompile Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\GLExtensions.cpp">
+    <ClInclude Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\GLCheck.hpp" />
+    <ClInclude Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\GLExtensions.hpp" />
+    <ClCompile Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\GLExtensions.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -413,7 +409,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4289</TreatSpecificWarningsAsErrors>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClCompile Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\Image.cpp">
+    <ClCompile Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\Image.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -431,8 +427,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4289</TreatSpecificWarningsAsErrors>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\Image.hpp" />
-    <ClCompile Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\ImageLoader.cpp">
+    <ClInclude Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\Image.hpp" />
+    <ClCompile Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\ImageLoader.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -450,11 +446,11 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4289</TreatSpecificWarningsAsErrors>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\ImageLoader.hpp" />
-    <ClInclude Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\PrimitiveType.hpp" />
-    <ClInclude Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\Rect.hpp" />
-    <ClInclude Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\Rect.inl" />
-    <ClCompile Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\RenderStates.cpp">
+    <ClInclude Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\ImageLoader.hpp" />
+    <ClInclude Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\PrimitiveType.hpp" />
+    <ClInclude Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\Rect.hpp" />
+    <ClInclude Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\Rect.inl" />
+    <ClCompile Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\RenderStates.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -472,8 +468,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4289</TreatSpecificWarningsAsErrors>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\RenderStates.hpp" />
-    <ClCompile Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\RenderTexture.cpp">
+    <ClInclude Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\RenderStates.hpp" />
+    <ClCompile Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\RenderTexture.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -491,8 +487,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4289</TreatSpecificWarningsAsErrors>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\RenderTexture.hpp" />
-    <ClCompile Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\RenderTarget.cpp">
+    <ClInclude Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\RenderTexture.hpp" />
+    <ClCompile Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\RenderTarget.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -510,8 +506,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4289</TreatSpecificWarningsAsErrors>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\RenderTarget.hpp" />
-    <ClCompile Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\RenderWindow.cpp">
+    <ClInclude Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\RenderTarget.hpp" />
+    <ClCompile Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\RenderWindow.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -529,8 +525,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4289</TreatSpecificWarningsAsErrors>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\RenderWindow.hpp" />
-    <ClCompile Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\Shader.cpp">
+    <ClInclude Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\RenderWindow.hpp" />
+    <ClCompile Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\Shader.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -548,8 +544,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4289</TreatSpecificWarningsAsErrors>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\Shader.hpp" />
-    <ClCompile Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\Texture.cpp">
+    <ClInclude Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\Shader.hpp" />
+    <ClCompile Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\Texture.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -567,8 +563,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4289</TreatSpecificWarningsAsErrors>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\Texture.hpp" />
-    <ClCompile Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\TextureSaver.cpp">
+    <ClInclude Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\Texture.hpp" />
+    <ClCompile Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\TextureSaver.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -586,8 +582,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4289</TreatSpecificWarningsAsErrors>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\TextureSaver.hpp" />
-    <ClCompile Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\Transform.cpp">
+    <ClInclude Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\TextureSaver.hpp" />
+    <ClCompile Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\Transform.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -605,8 +601,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4289</TreatSpecificWarningsAsErrors>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\Transform.hpp" />
-    <ClCompile Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\Transformable.cpp">
+    <ClInclude Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\Transform.hpp" />
+    <ClCompile Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\Transformable.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -624,8 +620,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4289</TreatSpecificWarningsAsErrors>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\Transformable.hpp" />
-    <ClCompile Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\View.cpp">
+    <ClInclude Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\Transformable.hpp" />
+    <ClCompile Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\View.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -643,8 +639,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4289</TreatSpecificWarningsAsErrors>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\View.hpp" />
-    <ClCompile Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\Vertex.cpp">
+    <ClInclude Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\View.hpp" />
+    <ClCompile Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\Vertex.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -662,9 +658,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4289</TreatSpecificWarningsAsErrors>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\Vertex.hpp" />
-    <ClInclude Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\Drawable.hpp" />
-    <ClCompile Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\Shape.cpp">
+    <ClInclude Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\Vertex.hpp" />
+    <ClInclude Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\Drawable.hpp" />
+    <ClCompile Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\Shape.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -682,8 +678,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4289</TreatSpecificWarningsAsErrors>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\Shape.hpp" />
-    <ClCompile Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\CircleShape.cpp">
+    <ClInclude Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\Shape.hpp" />
+    <ClCompile Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\CircleShape.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -701,8 +697,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4289</TreatSpecificWarningsAsErrors>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\CircleShape.hpp" />
-    <ClCompile Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\RectangleShape.cpp">
+    <ClInclude Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\CircleShape.hpp" />
+    <ClCompile Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\RectangleShape.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -720,8 +716,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4289</TreatSpecificWarningsAsErrors>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\RectangleShape.hpp" />
-    <ClCompile Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\ConvexShape.cpp">
+    <ClInclude Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\RectangleShape.hpp" />
+    <ClCompile Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\ConvexShape.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -739,8 +735,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4289</TreatSpecificWarningsAsErrors>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\ConvexShape.hpp" />
-    <ClCompile Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\Sprite.cpp">
+    <ClInclude Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\ConvexShape.hpp" />
+    <ClCompile Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\Sprite.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -758,8 +754,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4289</TreatSpecificWarningsAsErrors>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\Sprite.hpp" />
-    <ClCompile Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\Text.cpp">
+    <ClInclude Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\Sprite.hpp" />
+    <ClCompile Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\Text.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -777,8 +773,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4289</TreatSpecificWarningsAsErrors>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\Text.hpp" />
-    <ClCompile Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\VertexArray.cpp">
+    <ClInclude Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\Text.hpp" />
+    <ClCompile Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\VertexArray.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -796,8 +792,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4289</TreatSpecificWarningsAsErrors>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\VertexArray.hpp" />
-    <ClCompile Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\VertexBuffer.cpp">
+    <ClInclude Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\VertexArray.hpp" />
+    <ClCompile Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\VertexBuffer.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -815,8 +811,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4289</TreatSpecificWarningsAsErrors>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\VertexBuffer.hpp" />
-    <ClCompile Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\RenderTextureImpl.cpp">
+    <ClInclude Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\include\SFML\Graphics\VertexBuffer.hpp" />
+    <ClCompile Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\RenderTextureImpl.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -834,8 +830,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4289</TreatSpecificWarningsAsErrors>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\RenderTextureImpl.hpp" />
-    <ClCompile Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\RenderTextureImplFBO.cpp">
+    <ClInclude Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\RenderTextureImpl.hpp" />
+    <ClCompile Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\RenderTextureImplFBO.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -853,8 +849,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4289</TreatSpecificWarningsAsErrors>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\RenderTextureImplFBO.hpp" />
-    <ClCompile Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\RenderTextureImplDefault.cpp">
+    <ClInclude Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\RenderTextureImplFBO.hpp" />
+    <ClCompile Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\RenderTextureImplDefault.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -872,22 +868,22 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4289</TreatSpecificWarningsAsErrors>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\RenderTextureImplDefault.hpp" />
+    <ClInclude Include="D:\rafay\racing-game-Cpp-SFML\thirdparty\SFML-2.6.1\src\SFML\Graphics\RenderTextureImplDefault.hpp" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\build\ZERO_CHECK.vcxproj">
-      <Project>{B25F3EE6-A5D9-30B7-A26F-F8DFA9C53E0A}</Project>
+    <ProjectReference Include="D:\rafay\racing-game-Cpp-SFML\build\ZERO_CHECK.vcxproj">
+      <Project>{9D2BC86E-29B8-3F05-AC5C-0DD9D92F7CB2}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\build\thirdparty\SFML-2.6.1\src\SFML\System\sfml-system.vcxproj">
-      <Project>{0910607F-5E30-322A-AF89-73E98B1D5EAE}</Project>
+    <ProjectReference Include="D:\rafay\racing-game-Cpp-SFML\build\thirdparty\SFML-2.6.1\src\SFML\System\sfml-system.vcxproj">
+      <Project>{FB0EE3B7-FD2A-3028-9EAB-D3AE7FADE6F9}</Project>
       <Name>sfml-system</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\rafay\CPP\projects\racing-game-Cpp-SFML\build\thirdparty\SFML-2.6.1\src\SFML\Window\sfml-window.vcxproj">
-      <Project>{B4EB61D6-825C-3338-A99E-97D16FFC5E86}</Project>
+    <ProjectReference Include="D:\rafay\racing-game-Cpp-SFML\build\thirdparty\SFML-2.6.1\src\SFML\Window\sfml-window.vcxproj">
+      <Project>{1EE3A0E6-F2A0-3A9F-8CB7-FBC2916EBD32}</Project>
       <Name>sfml-window</Name>
     </ProjectReference>
   </ItemGroup>

@@ -3,6 +3,6 @@ C:/Program Files/CMake/share/cmake-4.0/Modules/FindOpenGL.cmake
 C:/Program Files/CMake/share/cmake-4.0/Modules/FindPackageHandleStandardArgs.cmake
 C:/Program Files/CMake/share/cmake-4.0/Modules/FindPackageMessage.cmake
 C:/Program Files/CMake/share/cmake-4.0/Modules/GNUInstallDirs.cmake
-D:/rafay/CPP/projects/racing-game-Cpp-SFML/build/CMakeFiles/cmake.verify_globs
-D:/rafay/CPP/projects/racing-game-Cpp-SFML/thirdparty/imgui-sfml-2.6.x/CMakeLists.txt
-D:/rafay/CPP/projects/racing-game-Cpp-SFML/thirdparty/imgui-sfml-2.6.x/cmake/FindImGui.cmake
+D:/rafay/racing-game-Cpp-SFML/build/CMakeFiles/cmake.verify_globs
+D:/rafay/racing-game-Cpp-SFML/thirdparty/imgui-sfml-2.6.x/CMakeLists.txt
+D:/rafay/racing-game-Cpp-SFML/thirdparty/imgui-sfml-2.6.x/cmake/FindImGui.cmake
